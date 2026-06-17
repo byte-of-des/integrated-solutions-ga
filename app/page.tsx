@@ -17,8 +17,9 @@ const SERVICES = [
   { icon: 'film',    title: 'Home Theaters',            desc: 'Projector or large-format display, Dolby Atmos surround, and one-touch control.',   href: '/residential/home-theater' },
   { icon: 'camera',  title: 'Security Cameras',         desc: 'Indoor and outdoor camera systems with remote monitoring and motion alerts.',         href: '/residential/security-cameras' },
   { icon: 'flag',    title: 'Golf Simulators',          desc: 'Professional-grade simulator rooms designed and installed to spec.',                  href: '/residential/golf-simulators' },
-  { icon: 'wifi',    title: 'Wi-Fi & Networking',       desc: 'Whole-home mesh, structured cabling, and data closet builds.',                      href: '/residential/networking' },
-  { icon: 'monitor', title: 'Commercial AV',            desc: 'Conference rooms, digital signage, and scalable AV for businesses.',                  href: '/commercial/conference-room-av' },
+  { icon: 'wifi',      title: 'Wi-Fi & Networking',  desc: 'Whole-home mesh, structured cabling, and data closet builds.',           href: '/residential/networking' },
+  { icon: 'satellite', title: 'Starlink',             desc: 'Professional Starlink dish mounting, grounding, and whole-home Wi-Fi integration.', href: '/residential/starlink' },
+  { icon: 'monitor',   title: 'Commercial AV',        desc: 'Conference rooms, digital signage, and scalable AV for businesses.',              href: '/commercial/conference-room-av' },
 ]
 
 const REVIEWS = [

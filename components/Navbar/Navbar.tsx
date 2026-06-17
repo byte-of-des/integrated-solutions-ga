@@ -26,16 +26,28 @@ const COMMERCIAL = [
   { href: '/commercial/golf-simulators', label: 'Commercial Golf Simulators' },
 ]
 
+const SERVICE_AREAS = [
+  { href: '/service-areas', label: 'All Service Areas' },
+  { href: '/service-areas/cumming-ga', label: 'Cumming, GA' },
+  { href: '/service-areas/alpharetta-ga', label: 'Alpharetta, GA' },
+  { href: '/service-areas/johns-creek-ga', label: 'Johns Creek, GA' },
+  { href: '/service-areas/milton-ga', label: 'Milton, GA' },
+  { href: '/service-areas/roswell-ga', label: 'Roswell, GA' },
+  { href: '/service-areas/duluth-ga', label: 'Duluth, GA' },
+]
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [resOpen, setResOpen] = useState(false)
   const [comOpen, setComOpen] = useState(false)
+  const [areasOpen, setAreasOpen] = useState(false)
   const pathname = usePathname()
 
   useEffect(() => {
     setOpen(false)
     setResOpen(false)
     setComOpen(false)
+    setAreasOpen(false)
   }, [pathname])
 
   useEffect(() => {
@@ -73,8 +85,15 @@ export default function Navbar() {
               ))}
             </div>
           </li>
-          <li>
-            <Link href="/service-areas" className={`${styles.link} ${pathname.startsWith('/service-areas') ? styles.active : ''}`}>Service Areas</Link>
+          <li className={styles.ddWrap}>
+            <button className={`${styles.link} ${styles.ddTrigger} ${pathname.startsWith('/service-areas') ? styles.active : ''}`}>
+              Service Areas <span className={styles.chevron} aria-hidden>▾</span>
+            </button>
+            <div className={styles.dd}>
+              {SERVICE_AREAS.map(l => (
+                <Link key={l.href} href={l.href} className={styles.ddItem}>{l.label}</Link>
+              ))}
+            </div>
           </li>
           <li>
             <Link href="/gallery" className={`${styles.link} ${pathname === '/gallery' ? styles.active : ''}`}>Gallery</Link>
@@ -121,7 +140,14 @@ export default function Navbar() {
               </div>
             )}
 
-            <Link href="/service-areas" className={styles.mLink}>Service Areas</Link>
+            <button className={`${styles.mLink} ${styles.mAccordion}`} onClick={() => setAreasOpen(v => !v)}>
+              Service Areas <span>{areasOpen ? '▴' : '▾'}</span>
+            </button>
+            {areasOpen && (
+              <div className={styles.mSub}>
+                {SERVICE_AREAS.map(l => <Link key={l.href} href={l.href} className={styles.mSubLink}>{l.label}</Link>)}
+              </div>
+            )}
             <Link href="/gallery" className={styles.mLink}>Gallery</Link>
             <Link href="/about" className={styles.mLink}>About</Link>
             <Link href="/contact" className={`${styles.mLink} ${styles.mCta}`}>Get a Free Quote →</Link>
