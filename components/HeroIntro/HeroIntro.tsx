@@ -92,7 +92,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
         }, { once: true })
       })
 
-      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
       sessionStorage.setItem('isg-intro-shown', '1')
       onRevealRef.current()
       setDone(true)
@@ -110,7 +110,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
     return () => {
       mounted = false
-      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
       clearTimeout(fadeTimer)
       clearTimeout(fallbackTimer)
       videoEl?.removeEventListener('timeupdate', onTimeUpdate)
