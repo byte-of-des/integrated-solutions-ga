@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import AnnouncementBar from '@/components/AnnouncementBar/AnnouncementBar'
 import Footer from '@/components/Footer/Footer'
+import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* Hide hero content before first paint — removed by HeroIntro on mobile/reduced-motion skip */}
         <script dangerouslySetInnerHTML={{ __html: `document.documentElement.classList.add('isg-intro-pending')` }} />
+        <ScrollToTop />
         <AnnouncementBar />
         <Navbar />
         <main>{children}</main>
