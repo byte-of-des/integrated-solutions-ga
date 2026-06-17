@@ -4,7 +4,6 @@ import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
 import AnnouncementBar from '@/components/AnnouncementBar/AnnouncementBar'
 import Footer from '@/components/Footer/Footer'
-import IntroAnimation from '@/components/IntroAnimation/IntroAnimation'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,11 +33,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="preload" href="/videos/intro.mp4" as="video" type="video/mp4" />
-      </head>
       <body>
-        <IntroAnimation />
         <AnnouncementBar />
         <Navbar />
         <main>{children}</main>
