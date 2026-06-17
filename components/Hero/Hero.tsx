@@ -34,7 +34,7 @@ export default function Hero({
       <div ref={splitRef} className={`container ${styles.split}`}>
         {/* Left — content */}
         <div className={styles.left}>
-          {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
+          {eyebrow && <p className={styles.eyebrow} data-hero-item>{eyebrow}</p>}
           <h1 className={styles.headline} data-hero-item>{headline}</h1>
           {subheadline && <p className={styles.sub} data-hero-item>{subheadline}</p>}
           <div className={styles.actions} data-hero-item>
