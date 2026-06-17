@@ -17,9 +17,8 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
   useEffect(() => {
     const isMobile = window.matchMedia('(max-width: 768px)').matches
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const alreadyShown = sessionStorage.getItem('isg-intro-shown') === '1'
 
-    if (isMobile || reducedMotion || alreadyShown) {
+    if (isMobile || reducedMotion) {
       document.documentElement.classList.remove('isg-intro-pending')
       onRevealRef.current()
       setDone(true)
@@ -101,7 +100,6 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       document.documentElement.style.overflow = ''
       if (heroSection) heroSection.style.overflow = ''
       document.documentElement.classList.remove('isg-intro-pending')
-      sessionStorage.setItem('isg-intro-shown', '1')
       onRevealRef.current()
       setDone(true)
     }
