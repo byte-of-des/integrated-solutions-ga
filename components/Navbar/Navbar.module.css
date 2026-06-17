@@ -29,6 +29,12 @@
   display: block;
 }
 
+@media (max-width: 640px) {
+  .logoImg {
+    height: 60px;
+  }
+}
+
 /* Desktop nav */
 .desktopNav {
   display: flex;

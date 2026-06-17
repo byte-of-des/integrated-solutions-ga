@@ -41,6 +41,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -48,6 +49,16 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --nav-height: 80px;
+  }
+  .container {
+    padding: 0 16px;
+  }
 }
 
 a {

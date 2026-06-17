@@ -7,6 +7,14 @@
   max-width: 360px;
 }
 
+@media (max-width: 640px) {
+  .card {
+    max-width: 100%;
+    padding: 20px 16px;
+    border-radius: var(--radius-md);
+  }
+}
+
 .title {
   font-size: 1.1rem;
   font-weight: 700;
