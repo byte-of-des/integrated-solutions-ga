@@ -103,6 +103,7 @@ export default function Navbar() {
           </li>
         </ul>
 
+        <div className={styles.ctaSep} aria-hidden="true" />
         <Link href="/contact" className={`btn-primary ${styles.ctaBtn}`}>Get a Free Quote</Link>
 
         {/* Hamburger */}

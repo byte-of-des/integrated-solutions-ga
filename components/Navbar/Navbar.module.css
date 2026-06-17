@@ -24,7 +24,7 @@
 }
 
 .logoImg {
-  height: 140px;
+  height: 112px;
   width: auto;
   display: block;
 }
@@ -138,10 +138,20 @@
   color: var(--color-accent);
 }
 
+/* Separator before CTA */
+.ctaSep {
+  width: 1px;
+  height: 28px;
+  background: var(--color-border);
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
 /* CTA button */
 .ctaBtn {
   flex-shrink: 0;
-  margin-left: auto;
+  margin-left: 0;
   font-size: 0.875rem;
   padding: 10px 22px;
   letter-spacing: 0.01em;
