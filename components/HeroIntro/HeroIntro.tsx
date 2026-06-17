@@ -39,7 +39,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
     staggerTargets.forEach(el => { el.style.opacity = '0' })
     splitRef.current.classList.add('isg-hero-hidden')
-    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
 
     // Fade video in after paint settles
     const fadeTimer = setTimeout(() => {
