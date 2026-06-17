@@ -1,5 +1,5 @@
 .section {
-  padding: 96px 0;
+  padding: 56px 0;
   background: var(--color-bg);
 }
 
@@ -85,7 +85,7 @@
     gap: 14px;
   }
   .section {
-    padding: 64px 0;
+    padding: 40px 0;
   }
   .card {
     padding: 20px 18px;
