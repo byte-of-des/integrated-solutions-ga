@@ -1,11 +1,8 @@
-/* Fixed overlay below the navbar, covers the hero viewport area */
+/* Absolute overlay fills the hero section — sits below the content split (z-index 3) */
 .container {
-  position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 200;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
   pointer-events: none;
 }
 

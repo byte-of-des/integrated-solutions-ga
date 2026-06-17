@@ -33,6 +33,9 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     let mounted = true
     let flipped = false
 
+    // Temporarily lift overflow:hidden so the FLIP can exit the hero bounds
+    const heroSection = splitRef.current.parentElement as HTMLElement | null
+
     const staggerTargets = Array.from(
       splitRef.current.querySelectorAll('[data-hero-item]')
     ) as HTMLElement[]
@@ -40,6 +43,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     staggerTargets.forEach(el => { el.style.opacity = '0' })
     splitRef.current.classList.add('isg-hero-hidden')
     document.documentElement.style.overflow = 'hidden'
+    if (heroSection) heroSection.style.overflow = 'visible'
 
     // Fade video in after paint settles
     const fadeTimer = setTimeout(() => {
@@ -93,6 +97,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       })
 
       document.documentElement.style.overflow = ''
+      if (heroSection) heroSection.style.overflow = ''
       sessionStorage.setItem('isg-intro-shown', '1')
       onRevealRef.current()
       setDone(true)
@@ -111,6 +116,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     return () => {
       mounted = false
       document.documentElement.style.overflow = ''
+      if (heroSection) heroSection.style.overflow = ''
       clearTimeout(fadeTimer)
       clearTimeout(fallbackTimer)
       videoEl?.removeEventListener('timeupdate', onTimeUpdate)
