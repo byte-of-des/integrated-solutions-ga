@@ -1,11 +1,12 @@
-/* Absolute overlay fills the hero section — sits below the content split (z-index 3) */
+/* Absolute overlay covers left portion of hero — right edge stops before the form */
 .container {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 36%;
   z-index: 2;
   pointer-events: none;
-  -webkit-mask-image: linear-gradient(to right, black 55%, transparent 78%);
-  mask-image: linear-gradient(to right, black 55%, transparent 78%);
 }
 
 /* Video starts invisible — WAAPI owns opacity during FLIP, so NO transition here */
