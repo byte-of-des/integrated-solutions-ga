@@ -1,0 +1,32 @@
+/* Absolutely fills the hero section, centers the logo */
+.container {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Logo starts invisible — WAAPI will own opacity during FLIP, so NO transition here */
+.logo {
+  opacity: 0;
+}
+
+/* Added via JS after 50ms to start the entrance */
+.logoVisible {
+  animation: logoFadeIn 0.3s ease forwards;
+}
+
+.logoImg {
+  height: 120px;
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes logoFadeIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
