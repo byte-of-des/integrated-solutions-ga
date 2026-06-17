@@ -53,9 +53,6 @@ export default function Navbar() {
 
         {/* Desktop */}
         <ul className={styles.desktopNav} role="list">
-          <li>
-            <Link href="/" className={`${styles.link} ${pathname === '/' ? styles.active : ''}`}>Home</Link>
-          </li>
           <li className={styles.ddWrap}>
             <button className={`${styles.link} ${styles.ddTrigger} ${pathname.startsWith('/residential') ? styles.active : ''}`}>
               Residential <span className={styles.chevron} aria-hidden>▾</span>
@@ -106,8 +103,6 @@ export default function Navbar() {
       {open && (
         <div className={styles.drawer}>
           <div className="container">
-            <Link href="/" className={styles.mLink}>Home</Link>
-
             <button className={`${styles.mLink} ${styles.mAccordion}`} onClick={() => setResOpen(v => !v)}>
               Residential <span>{resOpen ? '▴' : '▾'}</span>
             </button>
