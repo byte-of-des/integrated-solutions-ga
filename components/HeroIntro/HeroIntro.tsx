@@ -20,11 +20,13 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     const alreadyShown = sessionStorage.getItem('isg-intro-shown') === '1'
 
     if (isMobile || reducedMotion || alreadyShown) {
+      document.documentElement.classList.remove('isg-intro-pending')
       onRevealRef.current()
       setDone(true)
       return
     }
     if (!splitRef.current) {
+      document.documentElement.classList.remove('isg-intro-pending')
       onRevealRef.current()
       setDone(true)
       return
@@ -98,6 +100,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
       document.documentElement.style.overflow = ''
       if (heroSection) heroSection.style.overflow = ''
+      document.documentElement.classList.remove('isg-intro-pending')
       sessionStorage.setItem('isg-intro-shown', '1')
       onRevealRef.current()
       setDone(true)
@@ -117,6 +120,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       mounted = false
       document.documentElement.style.overflow = ''
       if (heroSection) heroSection.style.overflow = ''
+      document.documentElement.classList.remove('isg-intro-pending')
       clearTimeout(fadeTimer)
       clearTimeout(fallbackTimer)
       videoEl?.removeEventListener('timeupdate', onTimeUpdate)

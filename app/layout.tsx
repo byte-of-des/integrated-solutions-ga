@@ -34,6 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={inter.variable}>
       <body>
+        {/* Blocks first paint until sessionStorage is checked — prevents hero content flash */}
+        <script dangerouslySetInnerHTML={{ __html: `try{if(!sessionStorage.getItem('isg-intro-shown'))document.documentElement.classList.add('isg-intro-pending')}catch(e){}` }} />
         <AnnouncementBar />
         <Navbar />
         <main>{children}</main>
