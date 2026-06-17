@@ -28,9 +28,9 @@ const REVIEWS = [
 ]
 
 const GALLERY = [
-  '75" TV Mount in Cumming',
-  'Conference Room AV in Alpharetta',
-  'Custom Home Theater in Milton',
+  { label: '75" TV Mount in Cumming',          img: '/images/gallery-tv-mount.png' },
+  { label: 'Conference Room AV in Alpharetta', img: '/images/gallery-conference-av.png' },
+  { label: 'Custom Home Theater in Milton',    img: '/images/gallery-home-theater.png' },
 ]
 
 export default function HomePage() {
@@ -102,14 +102,9 @@ export default function HomePage() {
               </ul>
               <Link href="/contact" className="btn-primary">Get a Free Estimate →</Link>
             </div>
-            <div className={styles.whyPhoto} aria-hidden>
-              <div className={styles.whyPhotoPlaceholder}>
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                  <circle cx="12" cy="13" r="3" />
-                </svg>
-                <span>Team Photo</span>
-              </div>
+            <div className={styles.whyPhoto}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/why-choose-us.png" alt="ISG technician connecting AV equipment" className={styles.whyPhotoImg} />
             </div>
           </div>
         </div>
@@ -185,13 +180,11 @@ export default function HomePage() {
         <div className="container">
           <h2 className={styles.galleryTitle}>Recent Installations</h2>
           <div className={styles.galleryGrid}>
-            {GALLERY.map(label => (
+            {GALLERY.map(({ label, img }) => (
               <div key={label} className={styles.galleryItem}>
                 <div className={styles.galleryPhoto}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                    <circle cx="12" cy="13" r="3" />
-                  </svg>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={img} alt={label} className={styles.galleryPhotoImg} />
                 </div>
                 <p className={styles.galleryCaption}>{label}</p>
               </div>
