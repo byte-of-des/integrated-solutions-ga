@@ -77,7 +77,7 @@ export default function Hero({
         </div>
 
         {/* Right — quote form */}
-        <div className={styles.right}>
+        <div className={styles.right} data-hero-visible>
           <HeroForm />
         </div>
       </div>

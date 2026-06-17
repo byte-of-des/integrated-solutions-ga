@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ── HeroIntro animation helpers ── */
-.isg-hero-hidden > * {
+.isg-hero-hidden > *:not([data-hero-visible]) {
   visibility: hidden;
 }
 

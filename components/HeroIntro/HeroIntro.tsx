@@ -101,7 +101,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     function onTimeUpdate() {
       const el = videoRef.current
       if (!el || !isFinite(el.duration)) return
-      if (el.currentTime >= el.duration - 0.3) flip()
+      if (el.currentTime >= el.duration - 1.0) flip()
     }
 
     const videoEl = videoRef.current
