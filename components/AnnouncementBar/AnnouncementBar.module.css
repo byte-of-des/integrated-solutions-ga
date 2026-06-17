@@ -1,0 +1,41 @@
+.bar {
+  background: var(--color-navy);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.775rem;
+  font-weight: 500;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.items {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.sep {
+  margin: 0 10px;
+  opacity: 0.35;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: opacity 0.1s;
+}
+
+.phone:hover { opacity: 0.85; }
+
+@media (max-width: 640px) {
+  .items { display: none; }
+}

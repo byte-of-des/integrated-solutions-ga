@@ -1,0 +1,47 @@
+.band {
+  background: var(--color-navy);
+  padding: 80px 0;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.text {}
+
+.headline {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+
+.sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .band {
+    padding: 60px 0;
+  }
+  .actions {
+    flex-wrap: wrap;
+  }
+}

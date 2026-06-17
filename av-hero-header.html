@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/V Hero Header</title>
+<style>
+  :root {
+    --accent: #50e3a4;      /* swap for your brand accent */
+    --ink: #f4f7f6;
+    --haze: rgba(80, 227, 164, 0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body { background: #07090b; font-family: system-ui, sans-serif; }
+
+  /* ---- HERO ---- */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 560px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Background still: slow Ken Burns drift + zoom */
+  .hero__bg {
+    position: absolute;
+    inset: -4%;                         /* overscan so edges never show during motion */
+    background-image: url('YOUR_OPENART_STILL.jpg');
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    animation: kenburns 28s ease-in-out infinite alternate;
+  }
+
+  @keyframes kenburns {
+    0%   { transform: scale(1.0)  translate3d(0, 0, 0); }
+    100% { transform: scale(1.08) translate3d(-1.5%, -1%, 0); }
+  }
+
+  /* Drifting light haze layer (the "alive" feeling) */
+  .hero__haze {
+    position: absolute;
+    inset: -20%;
+    background:
+      radial-gradient(circle at 30% 40%, var(--haze), transparent 45%),
+      radial-gradient(circle at 70% 60%, var(--haze), transparent 40%);
+    filter: blur(40px);
+    will-change: transform, opacity;
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift {
+    0%   { transform: translate3d(0, 0, 0);       opacity: 0.6; }
+    100% { transform: translate3d(4%, -3%, 0);    opacity: 1;   }
+  }
+
+  /* Pulsing glow over the screen / focal point */
+  .hero__glow {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    width: 50vw;
+    height: 30vh;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(ellipse, rgba(255,255,255,0.10), transparent 70%);
+    will-change: opacity;
+    animation: breathe 6s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.35; }
+    50%      { opacity: 0.75; }
+  }
+
+  /* Darkening gradient so text stays legible over any frame */
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.35) 45%, transparent 100%);
+  }
+
+  /* Foreground content — sits in the left negative space */
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    padding: 0 8vw;
+    max-width: 720px;
+    color: var(--ink);
+  }
+  .hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+  .hero__title {
+    font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+    line-height: 1.05;
+    font-weight: 700;
+  }
+  .hero__sub {
+    margin: 1.4rem 0 2.2rem;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    color: rgba(244, 247, 246, 0.8);
+    max-width: 46ch;
+  }
+  .hero__cta {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    background: var(--accent);
+    color: #07090b;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .hero__cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(80, 227, 164, 0.35);
+  }
+
+  /* Respect users who don't want motion */
+  @media (prefers-reduced-motion: reduce) {
+    .hero__bg, .hero__haze, .hero__glow { animation: none; }
+  }
+
+  /* Mobile: calm it down for performance */
+  @media (max-width: 640px) {
+    .hero__bg   { animation-duration: 40s; }
+    .hero__haze { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__haze"></div>
+    <div class="hero__glow"></div>
+    <div class="hero__scrim"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Licensed &amp; Insured Custom A/V</p>
+      <h1 class="hero__title">Your home, perfectly tuned.</h1>
+      <p class="hero__sub">Home theaters, whole-home audio, surveillance, and smart automation — designed and installed for spaces that demand the best.</p>
+      <a href="#contact" class="hero__cta">Request a Consultation</a>
+    </div>
+  </section>
+
+  <!--
+    TO USE A KLING VIDEO INSTEAD OF THE STILL:
+    Replace <div class="hero__bg"></div> with:
+
+    <video class="hero__bg" autoplay muted loop playsinline poster="YOUR_OPENART_STILL.jpg">
+      <source src="your-kling-loop.webm" type="video/webm">
+      <source src="your-kling-loop.mp4"  type="video/mp4">
+    </video>
+
+    ...and remove the `animation: kenburns` line from .hero__bg (the video provides the motion).
+    Keep the still as the `poster` so mobile/slow connections still get a clean image.
+  -->
+</body>
+</html>
