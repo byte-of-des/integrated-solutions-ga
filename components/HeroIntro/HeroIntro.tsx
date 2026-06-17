@@ -43,7 +43,6 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
     staggerTargets.forEach(el => { el.style.opacity = '0' })
     splitRef.current.classList.add('isg-hero-hidden')
-    document.documentElement.style.overflow = 'hidden'
     if (heroSection) heroSection.style.overflow = 'visible'
 
     // Fade video in after paint settles
@@ -97,7 +96,6 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
         }, { once: true })
       })
 
-      document.documentElement.style.overflow = ''
       if (heroSection) heroSection.style.overflow = ''
       document.documentElement.classList.remove('isg-intro-pending')
       onRevealRef.current()
@@ -116,7 +114,6 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
     return () => {
       mounted = false
-      document.documentElement.style.overflow = ''
       if (heroSection) heroSection.style.overflow = ''
       document.documentElement.classList.remove('isg-intro-pending')
       clearTimeout(fadeTimer)
