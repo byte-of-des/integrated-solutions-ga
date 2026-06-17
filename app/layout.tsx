@@ -12,6 +12,11 @@ const inter = Inter({
   display: 'swap',
 })
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   title: {
     default: 'Integrated Solutions of Georgia | AV & Home Technology Installer',
@@ -29,6 +34,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preload" href="/videos/intro.mp4" as="video" type="video/mp4" />
+      </head>
       <body>
         <IntroAnimation />
         <AnnouncementBar />

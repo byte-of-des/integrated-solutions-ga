@@ -8,25 +8,15 @@ export default function IntroAnimation() {
   const [phase, setPhase] = useState<Phase>('video')
   const logoRef = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    if (sessionStorage.getItem('isg-intro-seen')) {
-      setPhase('done')
-    }
-  }, [])
-
   function handleVideoEnd() {
     setPhase('logo')
     setTimeout(() => setPhase('exiting'), 700)
-    setTimeout(() => {
-      setPhase('done')
-      sessionStorage.setItem('isg-intro-seen', '1')
-    }, 1450)
+    setTimeout(() => setPhase('done'), 1450)
   }
 
   // Fallback: if video fails to load/play, skip after 4s
   useEffect(() => {
     if (phase !== 'video') return
-    if (sessionStorage.getItem('isg-intro-seen')) return
     const t = setTimeout(handleVideoEnd, 4000)
     return () => clearTimeout(t)
   }, [phase])
@@ -69,6 +59,7 @@ export default function IntroAnimation() {
           autoPlay
           muted
           playsInline
+          preload="auto"
           onEnded={handleVideoEnd}
         />
       )}
