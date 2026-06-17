@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar/Navbar'
 import AnnouncementBar from '@/components/AnnouncementBar/AnnouncementBar'
 import Footer from '@/components/Footer/Footer'
 import ScrollToTop from '@/components/ScrollToTop/ScrollToTop'
+import MobileCta from '@/components/MobileCta/MobileCta'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <MobileCta />
       </body>
     </html>
   )

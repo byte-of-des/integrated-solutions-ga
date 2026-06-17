@@ -1,0 +1,59 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.08);
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    gap: 10px;
+  }
+
+  .call {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex: 1;
+    padding: 12px 0;
+    border-radius: 10px;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .call:hover {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  .quote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 12px 0;
+    border-radius: 10px;
+    background: var(--color-cta);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.12s;
+  }
+
+  .quote:hover {
+    background: var(--color-cta-hover);
+  }
+}

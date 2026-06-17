@@ -52,6 +52,12 @@ body {
   overflow-x: clip;
 }
 
+@media (max-width: 900px) {
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom));
+  }
+}
+
 @media (max-width: 640px) {
   :root {
     --nav-height: 80px;
