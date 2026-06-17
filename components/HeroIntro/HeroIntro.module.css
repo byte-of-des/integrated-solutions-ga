@@ -4,6 +4,7 @@
   inset: 0;
   z-index: 1;
   background: #2e2f33;
+  pointer-events: none;
 }
 
 /* Video overlay — full hero width, form column sits above at z-index 3 */
