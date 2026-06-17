@@ -55,6 +55,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       flipped = true
 
       const videoEl = videoRef.current
+      videoEl?.pause()
       if (!videoEl || !mounted) { reveal(); return }
 
       const introRect = videoEl.getBoundingClientRect()
@@ -95,15 +96,21 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       setDone(true)
     }
 
+    function onTimeUpdate() {
+      const el = videoRef.current
+      if (!el || !isFinite(el.duration)) return
+      if (el.currentTime >= el.duration - 0.3) flip()
+    }
+
     const videoEl = videoRef.current
-    videoEl?.addEventListener('ended', flip)
+    videoEl?.addEventListener('timeupdate', onTimeUpdate)
     videoEl?.addEventListener('error', flip)
 
     return () => {
       mounted = false
       clearTimeout(fadeTimer)
       clearTimeout(fallbackTimer)
-      videoEl?.removeEventListener('ended', flip)
+      videoEl?.removeEventListener('timeupdate', onTimeUpdate)
       videoEl?.removeEventListener('error', flip)
     }
   }, [splitRef])

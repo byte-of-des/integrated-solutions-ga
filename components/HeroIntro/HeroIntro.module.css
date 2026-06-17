@@ -12,8 +12,9 @@
 /* Video starts invisible — WAAPI owns opacity during FLIP, so NO transition here */
 .video {
   opacity: 0;
-  max-height: 320px;
+  height: calc(100vh - var(--nav-height));
   width: auto;
+  max-width: 100vw;
   display: block;
 }
 
