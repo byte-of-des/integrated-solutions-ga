@@ -82,6 +82,16 @@
   position: relative;
 }
 
+/* Transparent bridge so the hover doesn't break crossing the gap to the dropdown */
+.ddWrap::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 12px;
+}
+
 .dd {
   position: absolute;
   top: calc(100% + 10px);
