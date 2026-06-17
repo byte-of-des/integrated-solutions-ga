@@ -12,6 +12,7 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
   const [logoVisible, setLogoVisible] = useState(false)
   const logoRef = useRef<HTMLDivElement>(null)
   const onRevealRef = useRef(onReveal)
+  useEffect(() => { onRevealRef.current = onReveal }, [onReveal])
 
   useEffect(() => {
     const isMobile = window.matchMedia('(max-width: 768px)').matches
@@ -85,6 +86,10 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
         el.style.removeProperty('opacity')
         el.style.animationDelay = `${i * 80}ms`
         el.classList.add('isg-fade-in')
+        el.addEventListener('animationend', () => {
+          el.classList.remove('isg-fade-in')
+          el.style.removeProperty('animation-delay')
+        }, { once: true })
       })
 
       sessionStorage.setItem('isg-intro-shown', '1')
