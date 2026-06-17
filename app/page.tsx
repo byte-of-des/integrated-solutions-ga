@@ -118,7 +118,7 @@ export default function HomePage() {
             <div className={styles.areasMap} aria-hidden>
               <div className={styles.mapWrapper}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/georgia.png" alt="" className={styles.mapImg} />
+                <img src="/images/ga.png" alt="" className={styles.mapImg} />
                 {[
                   { top: '26%', left: '38%' }, /* Cumming */
                   { top: '32%', left: '40%' }, /* Alpharetta */
