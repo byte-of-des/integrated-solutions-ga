@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, RefObject } from 'react'
 import styles from './HeroIntro.module.css'
 
 interface HeroIntroProps {
-  splitRef: RefObject<HTMLDivElement>
+  splitRef: RefObject<HTMLDivElement | null>
   onReveal: () => void
 }
 
