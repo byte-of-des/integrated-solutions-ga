@@ -1,32 +1,28 @@
-/* Absolutely fills the hero section, centers the logo */
+/* Fixed overlay covers the full viewport, centers the video in viewport space */
 .container {
-  position: absolute;
+  position: fixed;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
+  z-index: 200;
   pointer-events: none;
 }
 
-/* Logo starts invisible — WAAPI will own opacity during FLIP, so NO transition here */
-.logo {
+/* Video starts invisible — WAAPI owns opacity during FLIP, so NO transition here */
+.video {
   opacity: 0;
+  max-height: 320px;
+  width: auto;
+  display: block;
 }
 
 /* Added via JS after 50ms to start the entrance */
-.logoVisible {
-  animation: logoFadeIn 0.3s ease forwards;
+.videoVisible {
+  animation: videoFadeIn 0.4s ease forwards;
 }
 
-.logoImg {
-  height: 120px;
-  width: auto;
-  display: block;
-  filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.5));
-}
-
-@keyframes logoFadeIn {
-  from { opacity: 0; transform: scale(0.88); }
+@keyframes videoFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
 }

@@ -9,8 +9,8 @@ interface HeroIntroProps {
 
 export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
   const [done, setDone] = useState(false)
-  const [logoVisible, setLogoVisible] = useState(false)
-  const logoRef = useRef<HTMLDivElement>(null)
+  const [videoVisible, setVideoVisible] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const onRevealRef = useRef(onReveal)
   useEffect(() => { onRevealRef.current = onReveal }, [onReveal])
 
@@ -24,8 +24,6 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       setDone(true)
       return
     }
-
-    // Bail if splitRef hasn't attached (defensive — should not happen in practice)
     if (!splitRef.current) {
       onRevealRef.current()
       setDone(true)
@@ -33,31 +31,33 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
     }
 
     let mounted = true
+    let flipped = false
 
-    // Find stagger targets before hiding (so we can restore them on reveal)
     const staggerTargets = Array.from(
       splitRef.current.querySelectorAll('[data-hero-item]')
     ) as HTMLElement[]
 
-    // Hide hero content.
-    // isg-hero-hidden > * { visibility: hidden } makes .left and .right invisible.
-    // Setting opacity:0 on each stagger target is additional so on reveal they animate from 0.
     staggerTargets.forEach(el => { el.style.opacity = '0' })
     splitRef.current.classList.add('isg-hero-hidden')
 
-    // Fade logo in after paint settles
+    // Fade video in after paint settles
     const fadeTimer = setTimeout(() => {
-      if (mounted) setLogoVisible(true)
+      if (mounted) setVideoVisible(true)
     }, 50)
 
-    // Fire FLIP after logo hold period
-    const flipTimer = setTimeout(flip, 900)
+    // Safety fallback: video duration (5s) + fade-in buffer
+    const fallbackTimer = setTimeout(() => {
+      if (mounted && !flipped) flip()
+    }, 5600)
 
     function flip() {
-      const logoEl = logoRef.current
-      if (!logoEl || !mounted) { reveal(); return }
+      if (flipped) return
+      flipped = true
 
-      const introRect = logoEl.getBoundingClientRect()
+      const videoEl = videoRef.current
+      if (!videoEl || !mounted) { reveal(); return }
+
+      const introRect = videoEl.getBoundingClientRect()
       const navImg = document.querySelector('[data-navbar-logo] img') as HTMLElement | null
       if (!navImg) { reveal(); return }
       const navRect = navImg.getBoundingClientRect()
@@ -66,22 +66,20 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       const dy = (navRect.top + navRect.height / 2) - (introRect.top + introRect.height / 2)
       const scale = navRect.height / introRect.height
 
-      logoEl.animate(
+      videoEl.animate(
         [
           { transform: 'translate(0,0) scale(1)', opacity: 1 },
           { transform: `translate(${dx}px, ${dy}px) scale(${scale})`, opacity: 0 },
         ],
-        { duration: 600, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', fill: 'forwards' }
+        { duration: 700, easing: 'cubic-bezier(0.4, 0, 0.2, 1)', fill: 'forwards' }
       ).finished.then(reveal).catch(reveal)
     }
 
     function reveal() {
       if (!mounted) return
 
-      // Restore hero content (splitRef.current is guaranteed non-null — checked above)
       splitRef.current!.classList.remove('isg-hero-hidden')
 
-      // Stagger-reveal each [data-hero-item] element
       staggerTargets.forEach((el, i) => {
         el.style.removeProperty('opacity')
         el.style.animationDelay = `${i * 80}ms`
@@ -97,10 +95,16 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
       setDone(true)
     }
 
+    const videoEl = videoRef.current
+    videoEl?.addEventListener('ended', flip)
+    videoEl?.addEventListener('error', flip)
+
     return () => {
       mounted = false
       clearTimeout(fadeTimer)
-      clearTimeout(flipTimer)
+      clearTimeout(fallbackTimer)
+      videoEl?.removeEventListener('ended', flip)
+      videoEl?.removeEventListener('error', flip)
     }
   }, [splitRef])
 
@@ -108,17 +112,16 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
 
   return (
     <div className={styles.container} aria-hidden="true">
-      <div
-        ref={logoRef}
-        className={`${styles.logo} ${logoVisible ? styles.logoVisible : ''}`}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/images/logo.png"
-          alt=""
-          className={styles.logoImg}
-        />
-      </div>
+      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+      <video
+        ref={videoRef}
+        className={`${styles.video} ${videoVisible ? styles.videoVisible : ''}`}
+        src="/videos/intro.mp4"
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+      />
     </div>
   )
 }
