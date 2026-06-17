@@ -6,13 +6,10 @@
   background: #2e2f33;
 }
 
-/* Video overlay — left portion only, above backdrop, below form column */
+/* Video overlay — full hero width, form column sits above at z-index 3 */
 .container {
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 36%;
+  inset: 0;
   z-index: 2;
   pointer-events: none;
 }
