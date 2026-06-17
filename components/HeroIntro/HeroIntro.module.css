@@ -1,4 +1,12 @@
-/* Absolute overlay covers left portion of hero — right edge stops before the form */
+/* Full-hero dark backdrop unifies background color during animation */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #0a0b0e;
+}
+
+/* Video overlay — left portion only, above backdrop, below form column */
 .container {
   position: absolute;
   top: 0;

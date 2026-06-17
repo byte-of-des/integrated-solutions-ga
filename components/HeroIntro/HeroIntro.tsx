@@ -127,17 +127,20 @@ export default function HeroIntro({ splitRef, onReveal }: HeroIntroProps) {
   if (done) return null
 
   return (
-    <div className={styles.container} aria-hidden="true">
-      {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-      <video
-        ref={videoRef}
-        className={`${styles.video} ${videoVisible ? styles.videoVisible : ''}`}
-        src="/videos/intro.mp4"
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-      />
-    </div>
+    <>
+      <div className={styles.backdrop} aria-hidden="true" />
+      <div className={styles.container} aria-hidden="true">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video
+          ref={videoRef}
+          className={`${styles.video} ${videoVisible ? styles.videoVisible : ''}`}
+          src="/videos/intro.mp4"
+          autoPlay
+          muted
+          playsInline
+          preload="auto"
+        />
+      </div>
+    </>
   )
 }
