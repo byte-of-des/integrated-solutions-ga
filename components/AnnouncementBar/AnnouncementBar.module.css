@@ -38,5 +38,5 @@
 
 @media (max-width: 640px) {
   .items { display: none; }
-  .inner { justify-content: flex-end; }
+  .phone { margin-left: auto; }
 }
