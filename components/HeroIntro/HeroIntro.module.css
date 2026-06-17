@@ -3,7 +3,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: #1c1d21;
+  background: #3a3b3f;
 }
 
 /* Video overlay — left portion only, above backdrop, below form column */
