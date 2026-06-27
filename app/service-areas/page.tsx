@@ -10,13 +10,17 @@ export const metadata: Metadata = {
 
 const AREAS = [
   { name: 'Cumming, GA', href: '/service-areas/cumming-ga', primary: true, desc: 'Our home base in Forsyth County. Same-day and next-day availability.' },
+  { name: 'Milton, GA', href: '/service-areas/milton-ga', desc: 'Estate homes and equestrian properties in North Fulton County.' },
   { name: 'Alpharetta, GA', href: '/service-areas/alpharetta-ga', desc: 'Technology-forward homes and businesses in North Fulton County.' },
   { name: 'Johns Creek, GA', href: '/service-areas/johns-creek-ga', desc: 'Residential and commercial installs throughout Johns Creek.' },
-  { name: 'Milton, GA', href: '/service-areas/milton-ga', desc: 'Estate homes and equestrian properties in Milton and Cherokee County.' },
-  { name: 'Roswell, GA', href: null, desc: 'Historic downtown area and surrounding residential communities.' },
+  { name: 'Gainesville, GA', href: null, desc: 'Hall County residential and business installs.' },
   { name: 'Dawsonville, GA', href: null, desc: 'Serving Dawson County homes and businesses.' },
+  { name: 'Dahlonega, GA', href: null, desc: 'Lumpkin County homes and mountain properties.' },
+  { name: 'Flowery Branch, GA', href: null, desc: 'Hall County lakeside communities and businesses.' },
+  { name: 'Buford, GA', href: null, desc: 'Hall and Gwinnett County residential service area.' },
+  { name: 'Canton, GA', href: null, desc: 'Cherokee County homes and growing communities.' },
   { name: 'Suwanee, GA', href: null, desc: 'Gwinnett County residential and commercial work.' },
-  { name: 'Buford, GA', href: null, desc: 'Hall and Gwinnett County service area.' },
+  { name: 'Roswell, GA', href: null, desc: 'Historic downtown area and surrounding residential communities.' },
 ]
 
 export default function ServiceAreasPage() {

@@ -13,34 +13,34 @@ export const metadata: Metadata = {
 }
 
 const SERVICES = [
-  { icon: 'tv',      title: 'TV & Sound Bar Mounting',  desc: 'Perfect placement, hidden cables, professional finish — every time.',              href: '/residential/tv-mounting' },
-  { icon: 'film',    title: 'Home Theaters',            desc: 'Projector or large-format display, Dolby Atmos surround, and one-touch control.',   href: '/residential/home-theater' },
-  { icon: 'camera',  title: 'Security Cameras',         desc: 'Indoor and outdoor camera systems with remote monitoring and motion alerts.',         href: '/residential/security-cameras' },
-  { icon: 'flag',    title: 'Golf Simulators',          desc: 'Professional-grade simulator rooms designed and installed to spec.',                  href: '/residential/golf-simulators' },
-  { icon: 'wifi',      title: 'Wi-Fi & Networking',  desc: 'Whole-home mesh, structured cabling, and data closet builds.',           href: '/residential/networking' },
-  { icon: 'satellite', title: 'Starlink',             desc: 'Professional Starlink dish mounting, grounding, and whole-home Wi-Fi integration.', href: '/residential/starlink' },
-  { icon: 'monitor',   title: 'Commercial AV',        desc: 'Conference rooms, digital signage, and scalable AV for businesses.',              href: '/commercial/conference-room-av' },
+  { icon: 'tv',        title: 'TV & Sound Bar Mounting',   desc: 'Perfect placement, hidden cables, professional finish — every time.',                        href: '/residential/tv-mounting' },
+  { icon: 'film',      title: 'Home Theaters',             desc: 'Projector or large-format display, Dolby Atmos surround, and one-touch control.',             href: '/residential/home-theater' },
+  { icon: 'camera',    title: 'Security Cameras',          desc: 'Indoor and outdoor camera systems with remote monitoring and motion alerts.',                  href: '/residential/security-cameras' },
+  { icon: 'wifi',      title: 'Wi-Fi & Networking',        desc: 'Whole-home mesh, structured cabling, Ubiquiti/Unifi, and data closet builds.',               href: '/residential/networking' },
+  { icon: 'satellite', title: 'Starlink',                  desc: 'Professional Starlink dish mounting, grounding, and whole-home Wi-Fi integration.',           href: '/residential/starlink' },
+  { icon: 'zap',       title: 'Smart Home Automation',     desc: 'One-touch control for lights, AV, shades, and climate throughout your home.',                 href: '/residential/automation' },
+  { icon: 'monitor',   title: 'Commercial AV',             desc: 'Restaurant & bar audio/video, business displays, Ubiquiti networking, and camera systems.',    href: '/commercial/displays' },
 ]
 
 const REVIEWS = [
   { name: 'Michael T.', location: 'Cumming, GA',     text: 'Mounted three TVs with full wire concealment. Everything looks factory-installed. These guys are on another level.', stars: 5 },
-  { name: 'Sarah R.',   location: 'Alpharetta, GA',  text: "Our conference room AV was a disaster before ISG came in. Now it just works. One button, everyone's on the call.",    stars: 5 },
-  { name: 'James K.',   location: 'Johns Creek, GA', text: 'Built out our golf simulator room. Incredibly thorough — measured ceiling height at the exact swing path. Spot on.', stars: 5 },
+  { name: 'Sarah R.',   location: 'Alpharetta, GA',  text: 'Had them wire our restaurant with distributed audio and TVs throughout. One controller, multiple zones — sounds great and looks clean.', stars: 5 },
+  { name: 'James K.',   location: 'Johns Creek, GA', text: 'Built out our home theater — projector, Atmos surround, and everything on a single remote. It completely transformed the room.', stars: 5 },
 ]
 
 const GALLERY = [
-  { label: '75" TV Mount in Cumming',          img: '/images/gallery-tv-mount.png' },
-  { label: 'Conference Room AV in Alpharetta', img: '/images/gallery-conference-av.png' },
-  { label: 'Custom Home Theater in Milton',    img: '/images/gallery-home-theater.png' },
+  { label: '75" TV Mount in Cumming',         img: '/images/gallery-tv-mount.png' },
+  { label: 'Restaurant AV Build in Alpharetta', img: '/images/gallery-conference-av.png' },
+  { label: 'Custom Home Theater in Milton',   img: '/images/gallery-home-theater.png' },
 ]
 
 export default function HomePage() {
   return (
     <>
       <Hero
-        eyebrow="Cumming, GA & North Atlanta"
+        eyebrow="Forsyth County and surrounding area"
         headline={<>Georgia&apos;s Expert AV &amp;<br />Home Tech Installer</>}
-        subheadline="Integrated Solutions of Georgia — TV mounting, security cameras, golf simulators, Starlink, home theaters, and commercial AV from one licensed and insured team."
+        subheadline="Integrated Solutions of Georgia — TV mounting, home theaters, security cameras, Starlink, smart automation, and commercial AV from one licensed and insured team."
         secondaryCta={{ label: 'Call (555) 000-0000', href: 'tel:5550000000' }}
       />
 
@@ -121,13 +121,17 @@ export default function HomePage() {
                 <img src="/images/ga.png" alt="" className={styles.mapImg} />
                 {[
                   { top: '26%', left: '38%' }, /* Cumming */
-                  { top: '32%', left: '40%' }, /* Alpharetta */
-                  { top: '36%', left: '36%' }, /* Roswell */
-                  { top: '32%', left: '45%' }, /* Johns Creek */
-                  { top: '43%', left: '38%' }, /* Atlanta */
-                  { top: '38%', left: '49%' }, /* Duluth */
-                  { top: '41%', left: '53%' }, /* Lawrenceville */
-                  { top: '55%', left: '45%' }, /* Macon */
+                  { top: '30%', left: '37%' }, /* Milton */
+                  { top: '33%', left: '40%' }, /* Alpharetta */
+                  { top: '31%', left: '46%' }, /* Johns Creek */
+                  { top: '18%', left: '47%' }, /* Gainesville */
+                  { top: '17%', left: '34%' }, /* Dawsonville */
+                  { top: '11%', left: '34%' }, /* Dahlonega */
+                  { top: '19%', left: '52%' }, /* Flowery Branch */
+                  { top: '26%', left: '51%' }, /* Buford */
+                  { top: '22%', left: '28%' }, /* Canton */
+                  { top: '29%', left: '50%' }, /* Suwanee */
+                  { top: '36%', left: '37%' }, /* Roswell */
                 ].map((pos, i) => (
                   <span
                     key={i}
@@ -138,9 +142,9 @@ export default function HomePage() {
               </div>
             </div>
             <div className={styles.areasContent}>
-              <h2 className={styles.areasTitle}>Proudly Serving Metro Atlanta &amp; Beyond</h2>
+              <h2 className={styles.areasTitle}>Proudly Serving Forsyth County &amp; North Atlanta</h2>
               <ul className={styles.citiesList}>
-                {['Atlanta', 'Alpharetta', 'Cumming', 'Johns Creek', 'Milton', 'Roswell', 'Duluth', 'Lawrenceville'].map(c => (
+                {['Cumming', 'Milton', 'Alpharetta', 'Johns Creek', 'Gainesville', 'Dawsonville', 'Dahlonega', 'Flowery Branch', 'Buford', 'Canton', 'Suwanee', 'Roswell'].map(c => (
                   <li key={c} className={styles.cityItem}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
@@ -150,7 +154,7 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <p className={styles.areasDesc}>From Buckhead condos to suburban home theaters, we help Georgia homeowners and businesses upgrade their AV setup.</p>
+              <p className={styles.areasDesc}>From Forsyth County homes to North Atlanta businesses, we help Georgia homeowners and businesses upgrade their AV and technology setup.</p>
               <Link href="/service-areas" className="btn-outline-dark">Check Your Area →</Link>
             </div>
           </div>

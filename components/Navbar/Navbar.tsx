@@ -7,7 +7,6 @@ import styles from './Navbar.module.css'
 const RESIDENTIAL = [
   { href: '/residential/tv-mounting', label: 'TV & Sound Bar Mounting' },
   { href: '/residential/security-cameras', label: 'Security Cameras & Surveillance' },
-  { href: '/residential/golf-simulators', label: 'Golf Simulators' },
   { href: '/residential/starlink', label: 'Starlink Installation' },
   { href: '/residential/home-theater', label: 'Home Theaters & Media Rooms' },
   { href: '/residential/whole-home-audio', label: 'Whole-Home & Outdoor Audio' },
@@ -17,13 +16,12 @@ const RESIDENTIAL = [
 ]
 
 const COMMERCIAL = [
-  { href: '/commercial/conference-room-av', label: 'Conference Room AV' },
   { href: '/commercial/displays', label: 'Commercial TV & Displays' },
   { href: '/commercial/surveillance', label: 'Business Surveillance' },
-  { href: '/commercial/networking', label: 'Commercial Networking' },
+  { href: '/commercial/networking', label: 'Networking & Data Drops' },
   { href: '/commercial/restaurant-bar', label: 'Restaurant & Bar A/V' },
-  { href: '/commercial/office-retail', label: 'Office & Retail Systems' },
-  { href: '/commercial/golf-simulators', label: 'Commercial Golf Simulators' },
+  { href: '/commercial/office-retail', label: 'Gym & Entertainment Systems' },
+  { href: '/commercial/automation', label: 'One-Touch Zone Automation' },
 ]
 
 const SERVICE_AREAS = [
@@ -33,7 +31,13 @@ const SERVICE_AREAS = [
   { href: '/service-areas/johns-creek-ga', label: 'Johns Creek, GA' },
   { href: '/service-areas/milton-ga', label: 'Milton, GA' },
   { href: '/service-areas/roswell-ga', label: 'Roswell, GA' },
-  { href: '/service-areas/duluth-ga', label: 'Duluth, GA' },
+  { href: '/service-areas/gainesville-ga', label: 'Gainesville, GA' },
+  { href: '/service-areas/dawsonville-ga', label: 'Dawsonville, GA' },
+  { href: '/service-areas/dahlonega-ga', label: 'Dahlonega, GA' },
+  { href: '/service-areas/canton-ga', label: 'Canton, GA' },
+  { href: '/service-areas/suwanee-ga', label: 'Suwanee, GA' },
+  { href: '/service-areas/buford-ga', label: 'Buford, GA' },
+  { href: '/service-areas/flowery-branch-ga', label: 'Flowery Branch, GA' },
 ]
 
 export default function Navbar() {

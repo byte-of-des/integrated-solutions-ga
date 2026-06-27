@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 const REVIEWS = [
   { name: 'Michael T.', location: 'Cumming, GA', text: "Mounted three TVs with full wire concealment. Everything looks factory-installed. I've had other companies do this before and the difference is obvious — these guys are on another level.", stars: 5 },
-  { name: 'Sarah R.', location: 'Alpharetta, GA', text: "Our conference room AV was a disaster before Integrated Solutions came in. Now it just works. One button, everyone's on the call, nobody's fighting with cables. Worth every penny.", stars: 5 },
-  { name: 'James K.', location: 'Johns Creek, GA', text: "Built out our golf simulator room. They were incredibly thorough — measured the ceiling height at the exact swing path, positioned everything perfectly. We're getting the accuracy we paid for.", stars: 5 },
+  { name: 'Sarah R.', location: 'Alpharetta, GA', text: "Had them wire our restaurant with distributed audio and TVs throughout. One controller, multiple zones — it sounds great and looks immaculate. My customers have noticed the difference.", stars: 5 },
+  { name: 'James K.', location: 'Johns Creek, GA', text: "Had them build out a full home theater — projector, Dolby Atmos surround, and everything on a single touch controller. They were meticulous about every detail. Couldn't be happier.", stars: 5 },
 ]
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
           <div className={styles.storyText}>
             <h2 className={styles.storyTitle}>Who We Are</h2>
             <p>Integrated Solutions of Georgia is a locally owned AV and home technology installation company based in Cumming, GA. We serve homeowners and businesses across North Atlanta — Forsyth County, Fulton County, and Gwinnett County.</p>
-            <p>We do the work that makes a real difference: TV mounting with hidden wires instead of a cable cover strip. A security camera system with no blind spots instead of a couple of cameras pointed at the driveway. A conference room that starts a call in one touch instead of a tangle of adapters and a speakerphone from 2014.</p>
+            <p>We do the work that makes a real difference: TV mounting with hidden wires instead of a cable cover strip. A security camera system with no blind spots instead of a couple of cameras pointed at the driveway. A home theater that puts you in the scene from the first frame — or a smart automation system where a single tap controls your lights, audio, and shades.</p>
             <p>Every job we take, we approach like it's our own home or our own business. That means recommending the right solution for your situation — not the most expensive one — and not leaving until everything works the way it should.</p>
           </div>
           <div className={styles.storyBadges}>
