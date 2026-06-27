@@ -4,7 +4,6 @@ import styles from './Footer.module.css'
 const RESIDENTIAL = [
   { href: '/residential/tv-mounting', label: 'TV & Sound Bar Mounting' },
   { href: '/residential/security-cameras', label: 'Security Cameras' },
-  { href: '/residential/golf-simulators', label: 'Golf Simulators' },
   { href: '/residential/starlink', label: 'Starlink Installation' },
   { href: '/residential/home-theater', label: 'Home Theaters' },
   { href: '/residential/whole-home-audio', label: 'Whole-Home Audio' },
@@ -14,11 +13,12 @@ const RESIDENTIAL = [
 ]
 
 const COMMERCIAL = [
-  { href: '/commercial/conference-room-av', label: 'Conference Room AV' },
-  { href: '/commercial/displays', label: 'Commercial Displays' },
+  { href: '/commercial/displays', label: 'Commercial TV & Displays' },
   { href: '/commercial/surveillance', label: 'Business Surveillance' },
-  { href: '/commercial/networking', label: 'Commercial Networking' },
+  { href: '/commercial/networking', label: 'Networking & Data Drops' },
   { href: '/commercial/restaurant-bar', label: 'Restaurant & Bar A/V' },
+  { href: '/commercial/office-retail', label: 'Gym & Entertainment Systems' },
+  { href: '/commercial/automation', label: 'One-Touch Zone Automation' },
 ]
 
 const SERVICE_AREAS = [
@@ -26,6 +26,14 @@ const SERVICE_AREAS = [
   { href: '/service-areas/alpharetta-ga', label: 'Alpharetta, GA' },
   { href: '/service-areas/johns-creek-ga', label: 'Johns Creek, GA' },
   { href: '/service-areas/milton-ga', label: 'Milton, GA' },
+  { href: '/service-areas/roswell-ga', label: 'Roswell, GA' },
+  { href: '/service-areas/gainesville-ga', label: 'Gainesville, GA' },
+  { href: '/service-areas/dawsonville-ga', label: 'Dawsonville, GA' },
+  { href: '/service-areas/dahlonega-ga', label: 'Dahlonega, GA' },
+  { href: '/service-areas/canton-ga', label: 'Canton, GA' },
+  { href: '/service-areas/suwanee-ga', label: 'Suwanee, GA' },
+  { href: '/service-areas/buford-ga', label: 'Buford, GA' },
+  { href: '/service-areas/flowery-branch-ga', label: 'Flowery Branch, GA' },
 ]
 
 export default function Footer() {
@@ -35,8 +43,8 @@ export default function Footer() {
         {/* Brand col */}
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
-            <span className={styles.logoMark}>ISG</span>
-            <span className={styles.logoFullName}>Integrated Solutions<br/>of Georgia</span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/logo2.png" alt="Integrated Solutions of Georgia" className={styles.logoImg} />
           </Link>
           <p className={styles.tagline}>Integrated Solutions of Georgia — licensed, insured AV &amp; home technology installation serving North Atlanta.</p>
           <div className={styles.contact}>
