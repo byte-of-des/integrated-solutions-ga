@@ -7,8 +7,8 @@ import styles from './page.module.css'
 const ICON_MAP = { tv: Tv, camera: Camera, satellite: Satellite, film: Film, volume2: Volume2, wifi: Wifi, zap: Zap, monitor: Monitor } as const
 
 export const metadata: Metadata = {
-  title: 'AV Installation in Cumming, GA | Integrated Solutions of Georgia',
-  description: 'ISG is based in Cumming, GA — serving Forsyth County with professional TV mounting, home theaters, security cameras, Starlink, smart home automation, and commercial AV.',
+  title: 'AV Installation in Alpharetta, GA | Integrated Solutions of Georgia',
+  description: 'Professional AV and home technology installation in Alpharetta, GA — TV mounting, home theaters, Starlink, security cameras, Ubiquiti networking, smart home automation, and commercial AV.',
 }
 
 const SERVICES = [
@@ -22,14 +22,14 @@ const SERVICES = [
   { icon: 'monitor' as const,   label: 'Commercial AV',            href: '/commercial/displays' },
 ]
 
-export default function CummingPage() {
+export default function AlpharettaPage() {
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroContent}`}>
-          <p className={styles.eyebrow}>Forsyth County, GA · Home Base</p>
-          <h1 className={styles.headline}>AV Installation in Cumming, GA</h1>
-          <p className={styles.sub}>We're based in Cumming — which means same-day and next-day availability, and a team that knows the area. TV mounting, home theaters, Starlink, security cameras, smart home automation, and commercial AV.</p>
+          <p className={styles.eyebrow}>North Fulton County, GA</p>
+          <h1 className={styles.headline}>AV Installation in Alpharetta, GA</h1>
+          <p className={styles.sub}>From smart home automation to whole-home audio, ISG brings professional AV installation to Alpharetta homeowners and businesses. Licensed, insured, and serving North Fulton County.</p>
           <div className={styles.actions}>
             <Link href="/contact" className="btn-primary">Get a Free Quote →</Link>
             <a href="tel:7709127642" className="btn-outline">Call 770-912-7642</a>
@@ -40,7 +40,7 @@ export default function CummingPage() {
 
       <section className={styles.services}>
         <div className="container">
-          <h2 className={styles.sectionTitle}>Services in Cumming, GA</h2>
+          <h2 className={styles.sectionTitle}>Services in Alpharetta, GA</h2>
           <div className={styles.serviceGrid}>
             {SERVICES.map(s => (
               <Link key={s.href} href={s.href} className={styles.serviceCard}>
@@ -57,9 +57,9 @@ export default function CummingPage() {
         <div className="container">
           <div className={styles.localInner}>
             <div>
-              <h2 className={styles.localTitle}>Locally Based in Forsyth County</h2>
-              <p>We're not driving two hours to your house. We're based right here in Cumming, which means faster response times, same-week scheduling, and a team that's available when something needs attention after the install.</p>
-              <p>We serve the entire Cumming area — from the Lake Lanier corridor to downtown Cumming to the South Forsyth neighborhoods along GA-400.</p>
+              <h2 className={styles.localTitle}>Serving Alpharetta &amp; North Fulton County</h2>
+              <p>Alpharetta homeowners expect a high standard — and that's exactly what we deliver. Whether you're upgrading a media room, installing a whole-home Ubiquiti network, or automating your lights and audio, we handle every detail with care.</p>
+              <p>We serve neighborhoods throughout Alpharetta including Windward, North Point, Downtown Alpharetta, and surrounding communities in North Fulton County.</p>
             </div>
             <div className={styles.localHighlights}>
               <div className={styles.highlight}>
@@ -72,8 +72,8 @@ export default function CummingPage() {
               <div className={styles.highlight}>
                 <span className={styles.hlIcon}><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
                 <div>
-                  <strong>Local Team</strong>
-                  <p>We live and work in Forsyth County</p>
+                  <strong>North Atlanta Local</strong>
+                  <p>Based in Cumming, minutes from Alpharetta</p>
                 </div>
               </div>
               <div className={styles.highlight}>
@@ -89,7 +89,7 @@ export default function CummingPage() {
       </section>
 
       <CtaBand
-        headline="Schedule your Cumming install."
+        headline="Schedule your Alpharetta install."
         sub="Free in-home quote. We'll assess your space and give you an honest estimate — usually within 24 hours."
       />
     </>
