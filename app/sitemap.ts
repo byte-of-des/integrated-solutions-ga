@@ -22,6 +22,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/residential/home-theater`,      lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/residential/security-cameras`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE}/residential/starlink`,          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/residential/whole-home-audio`,  lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/residential/networking`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/residential/automation`,        lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE}/residential/lighting`,          lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
 
     // Commercial service pages
     { url: `${BASE}/commercial`,                    lastModified: new Date(), changeFrequency: 'monthly', priority: 0.8 },
