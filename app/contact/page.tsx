@@ -48,7 +48,7 @@ export default function ContactPage() {
                   <span className={styles.infoIcon}><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
                   <div>
                     <p className={styles.infoLabel}>Email</p>
-                    <a href="mailto:info@isg-av.com" className={styles.infoValue}>info@isg-av.com</a>
+                    <a href="mailto:jeff@integratedsolutionsofga.com" className={styles.infoValue}>jeff@integratedsolutionsofga.com</a>
                   </div>
                 </div>
                 <div className={styles.infoItem}>
@@ -77,7 +77,7 @@ export default function ContactPage() {
             {/* Quote form */}
             <div className={styles.formWrap}>
               <h2 className={styles.formTitle}>Request a Quote</h2>
-              <form className={styles.form} action="mailto:info@isg-av.com" method="POST" encType="text/plain">
+              <form className={styles.form} action="mailto:jeff@integratedsolutionsofga.com" method="POST" encType="text/plain">
                 <div className={styles.row}>
                   <label className={styles.field}>
                     <span className={styles.label}>First Name</span>
