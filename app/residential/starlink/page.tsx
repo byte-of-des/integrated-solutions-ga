@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'Starlink Installation in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function StarlinkPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'starlink')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Cumming, GA & North Atlanta"
       headline="Starlink Installation"
       subheadline="High-speed satellite internet, professionally installed. We find the clearest sky view on your property and mount it properly — so it works, reliably."

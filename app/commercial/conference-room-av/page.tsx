@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'Conference Room AV Installation in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function ConferenceRoomPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'conference-room-av')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Commercial AV — Cumming, GA & North Atlanta"
       headline="Conference Room AV"
       subheadline="Video conferencing that actually works. We design and install conference rooms where every voice is heard, every face is visible, and every meeting starts on time."

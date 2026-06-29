@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'Home Theater Installation in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function HomeTheaterPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'home-theater')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Cumming, GA & North Atlanta"
       headline="Home Theaters & Media Rooms"
       subheadline="A cinema-quality experience designed around your space. Projector or large-format display, immersive surround sound, and control that actually works."

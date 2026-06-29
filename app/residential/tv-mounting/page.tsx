@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'TV & Sound Bar Mounting in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function TvMountingPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'tv-mounting')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Cumming, GA & North Atlanta"
       headline="TV & Sound Bar Mounting"
       subheadline="Perfect placement, fully concealed wires, and a clean wall finish — installed by professionals who care about the details."

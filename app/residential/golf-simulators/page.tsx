@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'Golf Simulator Installation in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function GolfSimulatorsPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'golf-simulators')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Cumming, GA & North Atlanta"
       headline="Home Golf Simulator Installation"
       subheadline="Play your best courses year-round. We design and install complete golf simulator rooms — from impact screen to projector to launch monitor."

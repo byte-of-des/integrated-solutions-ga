@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage/ServicePage'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 
 export const metadata: Metadata = {
   title: 'Security Camera Installation in Cumming, GA',
@@ -7,8 +9,10 @@ export const metadata: Metadata = {
 }
 
 export default function SecurityCamerasPage() {
+  const projects = (projectsJson as Project[]).filter(p => p.service === 'security-cameras')
   return (
     <ServicePage
+      projects={projects}
       eyebrow="Cumming, GA & North Atlanta"
       headline="Security Cameras & Surveillance"
       subheadline="See your property from anywhere. Professional camera systems installed with zero blind spots and remote access from your phone."
