@@ -41,7 +41,7 @@ export default function HomePage() {
         eyebrow="Forsyth County and surrounding area"
         headline={<>Georgia&apos;s Expert AV &amp;<br />Home Tech Installer</>}
         subheadline="Integrated Solutions of Georgia — TV mounting, home theaters, security cameras, Starlink, smart automation, and commercial AV from one licensed and insured team."
-        secondaryCta={{ label: 'Call (555) 000-0000', href: 'tel:5550000000' }}
+        secondaryCta={{ label: 'Call (770) 912-7642', href: 'tel:7709127642' }}
       />
 
       {/* Review platform trust bar */}
