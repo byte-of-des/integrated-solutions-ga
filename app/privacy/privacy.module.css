@@ -1,0 +1,46 @@
+.page {
+  padding: 6rem 0 4rem;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.updated {
+  color: var(--color-muted, #888);
+  font-size: 0.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.content section {
+  margin-bottom: 2rem;
+}
+
+.content h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.content p,
+.content ul {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-body, #444);
+}
+
+.content ul {
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.content a {
+  color: var(--color-accent, #0070f3);
+  text-decoration: underline;
+}
