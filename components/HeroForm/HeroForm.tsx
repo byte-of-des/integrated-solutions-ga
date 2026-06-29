@@ -4,14 +4,12 @@ import styles from './HeroForm.module.css'
 
 const SERVICES = [
   'TV & Sound Bar Mounting',
-  'Security Cameras',
-  'Golf Simulator',
-  'Starlink Installation',
   'Home Theater',
+  'Security Cameras',
+  'Starlink Installation',
   'Whole-Home Audio',
   'Wi-Fi & Networking',
   'Smart Home / Automation',
-  'Conference Room AV',
   'Commercial AV',
   'Other',
 ]
