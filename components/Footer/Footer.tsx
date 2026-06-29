@@ -2,51 +2,40 @@ import Link from 'next/link'
 import styles from './Footer.module.css'
 
 const RESIDENTIAL = [
-  { href: '/residential/tv-mounting', label: 'TV & Sound Bar Mounting' },
-  { href: '/residential/security-cameras', label: 'Security Cameras' },
-  { href: '/residential/starlink', label: 'Starlink Installation' },
-  { href: '/residential/home-theater', label: 'Home Theaters' },
-  { href: '/residential/whole-home-audio', label: 'Whole-Home Audio' },
-  { href: '/residential/networking', label: 'Wi-Fi & Networking' },
-  { href: '/residential/automation', label: 'Smart Home' },
-  { href: '/residential/lighting', label: 'Lighting Control' },
+  { href: '/residential/tv-mounting',       label: 'TV & Sound Bar Mounting' },
+  { href: '/residential/home-theater',      label: 'Home Theaters' },
+  { href: '/residential/security-cameras',  label: 'Security Cameras' },
+  { href: '/residential/starlink',          label: 'Starlink Installation' },
+  { href: '/residential/networking',        label: 'Wi-Fi & Networking' },
 ]
 
 const COMMERCIAL = [
-  { href: '/commercial/displays', label: 'Commercial TV & Displays' },
-  { href: '/commercial/surveillance', label: 'Business Surveillance' },
-  { href: '/commercial/networking', label: 'Networking & Data Drops' },
+  { href: '/commercial/displays',       label: 'Commercial TV & Displays' },
   { href: '/commercial/restaurant-bar', label: 'Restaurant & Bar A/V' },
-  { href: '/commercial/office-retail', label: 'Gym & Entertainment Systems' },
-  { href: '/commercial/automation', label: 'One-Touch Zone Automation' },
+  { href: '/commercial/networking',     label: 'Networking & Data Drops' },
+  { href: '/commercial/surveillance',   label: 'Business Surveillance' },
 ]
 
 const SERVICE_AREAS = [
-  { href: '/service-areas/cumming-ga', label: 'Cumming, GA' },
-  { href: '/service-areas/alpharetta-ga', label: 'Alpharetta, GA' },
-  { href: '/service-areas/johns-creek-ga', label: 'Johns Creek, GA' },
-  { href: '/service-areas/milton-ga', label: 'Milton, GA' },
-  { href: '/service-areas/roswell-ga', label: 'Roswell, GA' },
-  { href: '/service-areas/gainesville-ga', label: 'Gainesville, GA' },
-  { href: '/service-areas/dawsonville-ga', label: 'Dawsonville, GA' },
-  { href: '/service-areas/dahlonega-ga', label: 'Dahlonega, GA' },
-  { href: '/service-areas/canton-ga', label: 'Canton, GA' },
-  { href: '/service-areas/suwanee-ga', label: 'Suwanee, GA' },
-  { href: '/service-areas/buford-ga', label: 'Buford, GA' },
-  { href: '/service-areas/flowery-branch-ga', label: 'Flowery Branch, GA' },
+  { href: '/service-areas/cumming-ga',      label: 'Cumming, GA' },
+  { href: '/service-areas/alpharetta-ga',   label: 'Alpharetta, GA' },
+  { href: '/service-areas/johns-creek-ga',  label: 'Johns Creek, GA' },
+  { href: '/service-areas/milton-ga',       label: 'Milton, GA' },
+  { href: '/service-areas/gainesville-ga',  label: 'Gainesville, GA' },
 ]
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
+
         {/* Brand col */}
         <div className={styles.brand}>
           <Link href="/" className={styles.logo}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/images/logo2.png" alt="Integrated Solutions of Georgia" className={styles.logoImg} />
           </Link>
-          <p className={styles.tagline}>Integrated Solutions of Georgia — licensed, insured AV &amp; home technology installation serving North Atlanta.</p>
+          <p className={styles.tagline}>Licensed, insured AV &amp; home technology installation serving Forsyth County and North Atlanta.</p>
           <div className={styles.contact}>
             <a href="tel:5550000000" className={styles.contactLine}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.13h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.7a16 16 0 0 0 6.08 6.08l1.96-1.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -71,6 +60,7 @@ export default function Footer() {
             {RESIDENTIAL.map(l => (
               <li key={l.href}><Link href={l.href} className={styles.footLink}>{l.label}</Link></li>
             ))}
+            <li><Link href="/residential" className={styles.viewAll}>View All Residential →</Link></li>
           </ul>
         </div>
 
@@ -81,26 +71,29 @@ export default function Footer() {
             {COMMERCIAL.map(l => (
               <li key={l.href}><Link href={l.href} className={styles.footLink}>{l.label}</Link></li>
             ))}
+            <li><Link href="/commercial" className={styles.viewAll}>View All Commercial →</Link></li>
           </ul>
+        </div>
+
+        {/* Company + Service Areas */}
+        <div className={styles.col}>
+          <h3 className={styles.colTitle}>Company</h3>
+          <ul className={styles.linkList}>
+            <li><Link href="/about"   className={styles.footLink}>About Us</Link></li>
+            <li><Link href="/gallery" className={styles.footLink}>Gallery</Link></li>
+            <li><Link href="/contact" className={styles.footLink}>Free Quote</Link></li>
+            <li><Link href="/careers" className={styles.footLink}>Now Hiring</Link></li>
+          </ul>
+
           <h3 className={`${styles.colTitle} ${styles.colTitleSpacer}`}>Service Areas</h3>
           <ul className={styles.linkList}>
             {SERVICE_AREAS.map(l => (
               <li key={l.href}><Link href={l.href} className={styles.footLink}>{l.label}</Link></li>
             ))}
-            <li><Link href="/service-areas" className={styles.footLink}>View All Areas →</Link></li>
+            <li><Link href="/service-areas" className={styles.viewAll}>View All Areas →</Link></li>
           </ul>
         </div>
 
-        {/* Company */}
-        <div className={styles.col}>
-          <h3 className={styles.colTitle}>Company</h3>
-          <ul className={styles.linkList}>
-            <li><Link href="/about" className={styles.footLink}>About Us</Link></li>
-            <li><Link href="/gallery" className={styles.footLink}>Gallery</Link></li>
-            <li><Link href="/contact" className={styles.footLink}>Free Quote</Link></li>
-            <li><Link href="/careers" className={styles.footLink}>Now Hiring</Link></li>
-          </ul>
-        </div>
       </div>
 
       <div className={styles.bottom}>
@@ -108,7 +101,7 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} Integrated Solutions of Georgia. All rights reserved.</span>
           <div className={styles.bottomLinks}>
             <Link href="/privacy" className={styles.bottomLink}>Privacy</Link>
-            <Link href="/terms" className={styles.bottomLink}>Terms</Link>
+            <Link href="/terms"   className={styles.bottomLink}>Terms</Link>
           </div>
         </div>
       </div>
