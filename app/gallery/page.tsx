@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Browse ISG installation photos — TV mounts, home theaters, golf simulators, security cameras, and commercial AV in homes and businesses across North Atlanta.',
 }
 
-const CATEGORIES = ['All', 'TV Mounting', 'Home Theater', 'Golf Simulators', 'Security', 'Commercial', 'Networking']
+const CATEGORIES = ['All', 'TV Mounting', 'Home Theater', 'Security', 'Commercial', 'Networking']
 
 export default function GalleryPage() {
   return (
