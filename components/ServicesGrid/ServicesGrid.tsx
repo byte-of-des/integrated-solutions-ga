@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import {
   Tv, Camera, Crosshair, Satellite, Film, Volume2, Wifi, Home,
-  Video, Monitor, ShieldCheck, Flag,
+  Video, Monitor, ShieldCheck, Flag, Zap,
 } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import styles from './ServicesGrid.module.css'
@@ -20,6 +20,7 @@ const ICON_MAP: Record<string, LucideIcon> = {
   monitor: Monitor,
   'shield-check': ShieldCheck,
   flag: Flag,
+  zap: Zap,
 }
 
 interface Service {
