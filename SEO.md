@@ -79,6 +79,60 @@ Traffic that doesn't convert is wasted. Every page should have a clear, low-fric
 
 ---
 
+## Future: City × Service pages
+
+The highest-traffic SEO opportunity for a local installer is a dedicated page for every city + service combination — "TV Mounting in Cumming GA", "Home Theater in Alpharetta GA", etc. With 12 cities and 15 services that's ~180 pages, all generated from two template files using Next.js `generateStaticParams`. None of these go in the navbar — they're found via Google and linked from the city hub pages and service pages.
+
+**These pages are only as good as the project data behind them.** A page that just swaps a city name into generic copy is thin content and Google knows it. What makes them genuinely different — and genuinely valuable — is pulling real completed jobs for that city + service combination: the actual photo, the actual caption, the specific outcome.
+
+### The project data model
+
+Every completed job should be added to `data/projects.json` with:
+
+```json
+{
+  "id": "cumming-tv-mount-2025-03",
+  "title": "TV Mounting — Cumming",
+  "description": "65\" Samsung mounted above fireplace with full in-wall cable concealment in a Cumming home.",
+  "caption": "65\" Samsung above fireplace, cables hidden in wall",
+  "city": "cumming-ga",
+  "service": "tv-mounting",
+  "date": "2025-03",
+  "before": {
+    "src": "/images/work/cumming-tv-mount-before.jpg",
+    "alt": "TV on stand with cables visible"
+  },
+  "after": {
+    "src": "/images/work/cumming-tv-mount-after.jpg",
+    "alt": "65\" TV wall-mounted above fireplace, no visible cables"
+  }
+}
+```
+
+The `city` and `service` fields are the tags. That single record then automatically appears in:
+
+- **`/gallery`** — filtered by service or city
+- **`/residential/tv-mounting`** — shows all TV mounting projects across all cities
+- **`/service-areas/cumming-ga`** — shows all projects completed in Cumming
+- **`/residential/tv-mounting/cumming-ga`** — the city × service page, shows only TV mounting jobs in Cumming
+
+No extra work per page. Tag it once, it flows everywhere the filters already exist.
+
+### Workflow for adding real jobs
+
+After each completed install:
+1. Take a photo (after, and before if possible) — phone camera is fine, just good light
+2. Compress the image: `sips -Z 1400 --setProperty formatOptions 80 photo.jpg`
+3. Drop into `public/images/work/`
+4. Add a row to `data/projects.json` with the correct `city` slug and `service` slug
+5. That's it — the gallery, service pages, city pages, and (eventually) city × service pages all update automatically
+
+### When to build the city × service pages
+
+Build them once there are real projects in `data/projects.json` covering a reasonable spread of cities and services. Pages with zero matching projects still work — they just show the service content without a projects section — but the SEO value compounds significantly once real photos are attached. Even 2–3 jobs per service across a few cities is enough to start.
+
+---
+
 ## Adding new pages
 
 When adding any new page to the site:
