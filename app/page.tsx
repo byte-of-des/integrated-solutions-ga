@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Hero from '@/components/Hero/Hero'
 import ServicesGrid from '@/components/ServicesGrid/ServicesGrid'
 import CtaBand from '@/components/CtaBand/CtaBand'
@@ -104,8 +105,7 @@ export default function HomePage() {
               <Link href="/contact" className="btn-primary">Get a Free Estimate →</Link>
             </div>
             <div className={styles.whyPhoto}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/images/why-choose-us.png" alt="ISG technician connecting AV equipment" className={styles.whyPhotoImg} />
+              <Image src="/images/why-choose-us.png" alt="ISG technician connecting AV equipment" width={1024} height={1024} className={styles.whyPhotoImg} />
             </div>
           </div>
         </div>
@@ -117,8 +117,7 @@ export default function HomePage() {
           <div className={styles.areasInner}>
             <div className={styles.areasMap} aria-hidden>
               <div className={styles.mapWrapper}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/ga.png" alt="" className={styles.mapImg} />
+                <Image src="/images/ga.png" alt="" width={1024} height={1024} className={styles.mapImg} />
                 {[
                   { top: '26%', left: '38%' }, /* Cumming */
                   { top: '30%', left: '37%' }, /* Milton */
@@ -188,8 +187,7 @@ export default function HomePage() {
             {GALLERY.map(({ label, img }) => (
               <div key={label} className={styles.galleryItem}>
                 <div className={styles.galleryPhoto}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={img} alt={label} className={styles.galleryPhotoImg} />
+                  <Image src={img} alt={label} width={1024} height={1024} className={styles.galleryPhotoImg} />
                 </div>
                 <p className={styles.galleryCaption}>{label}</p>
               </div>

@@ -1,46 +1,75 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
+import FilterBar from './FilterBar'
+import type { Project } from '@/data/types'
+import projectsJson from '@/data/projects.json'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Gallery — Our Installations',
+  title: 'Gallery — Our Installations | Integrated Solutions of Georgia',
   description: 'Browse ISG installation photos — TV mounts, home theaters, security cameras, Starlink, and commercial AV in homes and businesses across North Atlanta.',
 }
 
-const CATEGORIES = ['All', 'TV Mounting', 'Home Theater', 'Security', 'Commercial', 'Networking']
+export default async function GalleryPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ service?: string; city?: string }>
+}) {
+  const { service = '', city = '' } = await searchParams
 
-export default function GalleryPage() {
+  const allProjects = projectsJson as Project[]
+  const filtered = allProjects.filter(p => {
+    if (service && p.service !== service) return false
+    if (city && p.city !== city) return false
+    return true
+  })
+
   return (
     <>
       <section className={styles.hero}>
         <div className={`container ${styles.heroContent}`}>
           <h1 className={styles.headline}>Our Work</h1>
-          <p className={styles.sub}>Real installs from homes and businesses across North Atlanta. Every photo is a job we completed — no stock images.</p>
+          <p className={styles.sub}>Real installs from homes and businesses across North Atlanta.</p>
         </div>
       </section>
 
       <section className={styles.gallery}>
         <div className="container">
-          <div className={styles.filters}>
-            {CATEGORIES.map(c => (
-              <button key={c} className={`${styles.filter} ${c === 'All' ? styles.filterActive : ''}`}>{c}</button>
-            ))}
-          </div>
+          <Suspense>
+            <FilterBar service={service} city={city} />
+          </Suspense>
 
-          {/* Photo grid — placeholder until real photos are added */}
-          <div className={styles.grid}>
-            {Array.from({ length: 12 }).map((_, i) => (
-              <div key={i} className={styles.photoPlaceholder}>
-                <div className={styles.photoInner}>
-                  <span className={styles.photoIcon}><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
-                  <span className={styles.photoLabel}>Installation Photo</span>
+          {filtered.length === 0 ? (
+            <p className={styles.empty}>No projects match the selected filters.</p>
+          ) : (
+            <div className={styles.grid}>
+              {filtered.map(p => (
+                <div key={p.id} className={styles.card}>
+                  <div className={styles.cardImg}>
+                    <Image
+                      src={p.after.src}
+                      alt={p.after.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className={styles.cardImgEl}
+                    />
+                    {p.before && (
+                      <span className={styles.beforeAfterBadge}>Before &amp; After</span>
+                    )}
+                  </div>
+                  <div className={styles.cardBody}>
+                    <p className={styles.cardTitle}>{p.title}</p>
+                    <p className={styles.cardCaption}>{p.caption}</p>
+                    <div className={styles.cardBadges}>
+                      <span className={styles.badge}>{p.service.replace(/-/g, ' ')}</span>
+                      <span className={styles.badge}>{p.city.replace(/-ga$/, '').replace(/-/g, ' ')}</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-          <p className={styles.note}>
-            Photos loading soon — check back or <a href="/contact" className={styles.link}>contact us</a> to see project examples relevant to your space.
-          </p>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </>

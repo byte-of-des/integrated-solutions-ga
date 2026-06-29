@@ -1,5 +1,7 @@
 'use client'
 import Link from 'next/link'
+import Image from 'next/image'
+import type { Project } from '@/data/types'
 import {
   Tv, Plug, Volume2, Ruler, Wrench, Gamepad2, Home, Satellite, Zap, CloudRain,
   Camera, Smartphone, HardDrive, Moon, Bell, Flag, Target, Monitor, Lightbulb,
@@ -45,6 +47,7 @@ export interface ServicePageProps {
   faqs?: Faq[]
   ctaHeadline?: string
   ctaSub?: string
+  projects?: Project[]
 }
 
 export default function ServicePage({
@@ -57,6 +60,7 @@ export default function ServicePage({
   faqs,
   ctaHeadline,
   ctaSub,
+  projects,
 }: ServicePageProps) {
   return (
     <>
@@ -128,6 +132,32 @@ export default function ServicePage({
                 <div key={f.q} className={styles.faq}>
                   <h3 className={styles.faqQ}>{f.q}</h3>
                   <p className={styles.faqA}>{f.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {projects && projects.length > 0 && (
+        <section className={styles.recentWork}>
+          <div className="container">
+            <h2 className={styles.sectionTitle}>Recent Work</h2>
+            <div className={styles.recentGrid}>
+              {projects.slice(0, 3).map(p => (
+                <div key={p.id} className={styles.recentCard}>
+                  <div className={styles.recentImgWrap}>
+                    <Image
+                      src={p.after.src}
+                      alt={p.after.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className={styles.recentImg}
+                    />
+                  </div>
+                  <div className={styles.recentBody}>
+                    <p className={styles.recentCaption}>{p.caption}</p>
+                  </div>
                 </div>
               ))}
             </div>

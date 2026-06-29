@@ -22,6 +22,7 @@ const COMMERCIAL = [
   { href: '/commercial/restaurant-bar', label: 'Restaurant & Bar A/V' },
   { href: '/commercial/office-retail', label: 'Gym & Entertainment Systems' },
   { href: '/commercial/automation', label: 'One-Touch Zone Automation' },
+  { href: '/commercial/conference-room-av', label: 'Conference Room AV' },
 ]
 
 const SERVICE_AREAS = [
@@ -64,7 +65,7 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} data-navbar-logo>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo2.png" alt="Integrated Solutions of Georgia" className={styles.logoImg} />
+          <img src="/images/logo2.png" alt="Integrated Solutions of Georgia" className={styles.logoImg} fetchPriority="high" />
         </Link>
 
         {/* Desktop */}

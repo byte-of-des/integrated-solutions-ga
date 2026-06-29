@@ -1,4 +1,3 @@
-'use client'
 import { Target, MessageSquare, Sparkles, CheckCircle2 } from 'lucide-react'
 import styles from './AboutValues.module.css'
 

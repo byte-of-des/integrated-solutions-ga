@@ -19,6 +19,7 @@ export const viewport = {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.integratedsolutionsofga.com'),
   title: {
     default: 'Integrated Solutions of Georgia | AV & Home Technology Installer',
     template: '%s | Integrated Solutions of Georgia',

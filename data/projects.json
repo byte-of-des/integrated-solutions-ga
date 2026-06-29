@@ -1,0 +1,44 @@
+[
+  {
+    "id": "cumming-tv-mount-seed",
+    "title": "TV Mounting — Cumming",
+    "description": "Professional TV and sound bar mounting with full cable concealment in a Cumming home.",
+    "caption": "Wall-mounted TV with hidden cables",
+    "city": "cumming-ga",
+    "service": "tv-mounting",
+    "date": "2025-01",
+    "before": null,
+    "after": {
+      "src": "/images/gallery-tv-mount.png",
+      "alt": "Wall-mounted TV with clean cable management"
+    }
+  },
+  {
+    "id": "cumming-home-theater-seed",
+    "title": "Home Theater Install — Cumming",
+    "description": "Complete home theater buildout with projector, screen, and surround sound in a Cumming home.",
+    "caption": "Dedicated media room with surround sound",
+    "city": "cumming-ga",
+    "service": "home-theater",
+    "date": "2025-01",
+    "before": null,
+    "after": {
+      "src": "/images/gallery-home-theater.png",
+      "alt": "Home theater room with projector and surround sound"
+    }
+  },
+  {
+    "id": "cumming-conference-av-seed",
+    "title": "Conference Room AV — Cumming",
+    "description": "Commercial AV installation for a conference room in the Cumming area, including large display and integrated sound.",
+    "caption": "Conference room AV system",
+    "city": "cumming-ga",
+    "service": "conference-room-av",
+    "date": "2025-01",
+    "before": null,
+    "after": {
+      "src": "/images/gallery-conference-av.png",
+      "alt": "Conference room with large display and AV system"
+    }
+  }
+]
