@@ -1,4 +1,3 @@
-'use client'
 import Link from 'next/link'
 import {
   Tv, Camera, Crosshair, Satellite, Film, Volume2, Wifi, Home,

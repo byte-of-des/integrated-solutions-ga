@@ -2,7 +2,7 @@ import type { CityData } from '@/data/cities/types'
 import type { Project } from '@/data/types'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Tv, Camera, Satellite, Film, Gamepad2, Monitor } from 'lucide-react'
+import { Tv, Camera, Satellite, Film, Monitor } from 'lucide-react'
 import CtaBand from '@/components/CtaBand/CtaBand'
 import reviewsJson from '@/data/reviews.json'
 import projectsJson from '@/data/projects.json'
@@ -13,7 +13,6 @@ const SERVICES = [
   { Icon: Film,     label: 'Home Theaters',           href: '/residential/home-theater' },
   { Icon: Camera,   label: 'Security Cameras',        href: '/residential/security-cameras' },
   { Icon: Satellite,label: 'Starlink Installation',   href: '/residential/starlink' },
-  { Icon: Gamepad2, label: 'Golf Simulators',         href: '/residential/golf-simulators' },
   { Icon: Monitor,  label: 'Commercial AV',           href: '/commercial/conference-room-av' },
 ]
 

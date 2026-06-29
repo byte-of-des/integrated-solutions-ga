@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import styles from './Navbar.module.css'
 
@@ -63,8 +64,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.logo} data-navbar-logo>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/logo2.png" alt="Integrated Solutions of Georgia" className={styles.logoImg} />
+          <Image src="/images/logo2.png" alt="Integrated Solutions of Georgia" width={200} height={200} className={styles.logoImg} priority />
         </Link>
 
         {/* Desktop */}

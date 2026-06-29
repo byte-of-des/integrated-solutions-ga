@@ -8,7 +8,6 @@ const SERVICES = [
   { value: 'home-theater', label: 'Home Theater' },
   { value: 'security-cameras', label: 'Security Cameras' },
   { value: 'starlink', label: 'Starlink' },
-  { value: 'golf-simulators', label: 'Golf Simulators' },
   { value: 'conference-room-av', label: 'Commercial AV' },
 ]
 
