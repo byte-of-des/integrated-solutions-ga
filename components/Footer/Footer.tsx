@@ -99,8 +99,7 @@ export default function Footer() {
         <div className="container">
           <span>© {new Date().getFullYear()} Integrated Solutions of Georgia. All rights reserved.</span>
           <div className={styles.bottomLinks}>
-            <Link href="/privacy" className={styles.bottomLink}>Privacy</Link>
-            <Link href="/terms"   className={styles.bottomLink}>Terms</Link>
+            <Link href="/privacy" className={styles.bottomLink}>Privacy Policy</Link>
           </div>
         </div>
       </div>

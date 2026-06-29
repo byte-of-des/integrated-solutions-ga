@@ -3,7 +3,7 @@ import styles from './page.module.css'
 
 export const metadata: Metadata = {
   title: 'Gallery — Our Installations',
-  description: 'Browse ISG installation photos — TV mounts, home theaters, golf simulators, security cameras, and commercial AV in homes and businesses across North Atlanta.',
+  description: 'Browse ISG installation photos — TV mounts, home theaters, security cameras, Starlink, and commercial AV in homes and businesses across North Atlanta.',
 }
 
 const CATEGORIES = ['All', 'TV Mounting', 'Home Theater', 'Security', 'Commercial', 'Networking']
