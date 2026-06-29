@@ -22,6 +22,7 @@ const COMMERCIAL = [
   { href: '/commercial/restaurant-bar', label: 'Restaurant & Bar A/V' },
   { href: '/commercial/office-retail', label: 'Gym & Entertainment Systems' },
   { href: '/commercial/automation', label: 'One-Touch Zone Automation' },
+  { href: '/commercial/conference-room-av', label: 'Conference Room AV' },
 ]
 
 const SERVICE_AREAS = [
