@@ -1,0 +1,429 @@
+[
+  {
+    "name": "ILONA STEWART",
+    "rating": 5,
+    "date": "2026-06",
+    "text": "Jeff from Integrated Solutions has done an incredible job installing both my televisions and my surround sound systems. He does a beautiful job and I will be using him again in the very near future. I highly recommend this company!",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "Leah Hawkins",
+    "rating": 5,
+    "date": "2026-06",
+    "text": "Awesome job. Looks so professional. The price was incredible. I followed the recommendations and I am not disappointed.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Andres Suarez",
+    "rating": 5,
+    "date": "2026-03",
+    "text": "Jeff and Tony were amazing. There were many obstacles imposed by other aspects of setting up my new home but they figured out solutions in a collaborative and creative way and got me up and running with wireless access points, smart locks and TVs throughout my home. I'll be calling them back for home theater integration next!",
+    "services": ["networking", "tv-mounting", "automation"]
+  },
+  {
+    "name": "karen miller",
+    "rating": 5,
+    "date": "2026-03",
+    "text": "Jeff has helped me with issues on a couple TVs. Always helpful and knowledgeable. Today he stopped by to assist with surround sound. So much better now. I would recommend him to anyone needing help from home theater to surveillance installation. It is important to have a trusted professional come into our homes.",
+    "services": ["home-theater", "security-cameras"]
+  },
+  {
+    "name": "Dennis Graham",
+    "rating": 5,
+    "date": "2026-03",
+    "text": "We had a great experience with 4 TVs installed on the walls in our new home in various rooms. Jeff was extremely professional, friendly, and patient, taking the time to make sure everything was done correctly and exactly how I wanted it.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Susan Meyer",
+    "rating": 5,
+    "date": "2026-04",
+    "text": "Jeff installed two TVs for me and they are perfect! He moved an outlet up behind one of the TVs so there's no electrical cord hanging down. The cable boxes are secured behind the TVs — out of sight. He takes care of EVERY detail! I highly recommend Jeff!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Juanita Yeager",
+    "rating": 5,
+    "date": "2026-04",
+    "text": "Best experience I could have ever had by choosing Integrated Solutions. They knew exactly what to do — they went above and beyond helping me wall mount a 65\" TV and install an antenna in the attic.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Kim Wilson",
+    "rating": 5,
+    "date": "2026-02",
+    "text": "Jeff is amazing! He has installed TVs in two of my houses now! He is careful, professional, precise with placement of the TVs, very helpful and super nice and trustworthy!! I have him pick up TVs and brackets for me and he brings them to my house and installs them!! I don't even have to go buy the TVs!! Incredible service!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Quadoah Ford",
+    "rating": 5,
+    "date": "2025-12",
+    "text": "Had a great experience with this TV installation. Jeff was extremely professional, friendly, and patient, taking the time to make sure everything was done correctly and exactly how I wanted it. The mounting was done cleanly and securely.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "James Cox",
+    "rating": 5,
+    "date": "2025-12",
+    "text": "The reviews were right — Jeff has superb customer service and follow through. I called Integrated Solutions after being ghosted by another company I had worked with prior and I'm so glad I did. I hired Jeff to help hardwire Ethernet and he did an amazing job.",
+    "services": ["networking"]
+  },
+  {
+    "name": "Cedric George",
+    "rating": 5,
+    "date": "2025-12",
+    "text": "Jeff did an excellent job connecting my Control4 system and cleaning up all the wiring. He was professional, knowledgeable, and very detail-oriented. The setup works perfectly now, and the wiring looks clean and organized.",
+    "services": ["automation", "home-theater"]
+  },
+  {
+    "name": "Sandra H.",
+    "rating": 5,
+    "date": "2025-11",
+    "text": "Jeff was courteous, knowledgeable, thorough, clean, and reasonably priced. Definitely will use again, and recommend!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Fred Moyle",
+    "rating": 5,
+    "date": "2025-09",
+    "text": "ISG installed 2 TVs and a soundbar in our new home. It was a great experience!",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "George Kaufman",
+    "rating": 5,
+    "date": "2025-10",
+    "text": "Jeff did an outstanding job installing four TVs in our home. He was professional, courteous, and extremely knowledgeable. He came fully prepared with all the necessary materials, extra cables, and tools to get everything set up perfectly.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Tashxo",
+    "rating": 5,
+    "date": "2025-10",
+    "text": "Jeff came highly recommended by my neighbor, and now I can see why. He did an excellent job installing both our 65\" and 75\" TVs using the pull-out wall brackets. His professionalism, attention to detail, and efficiency were clear from the start.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "ellen maffit",
+    "rating": 5,
+    "date": "2025-09",
+    "text": "Jeff is the best in his field, very kind, prompt, and quality service unsurpassed. You can't go wrong hiring him to complete your needs in the audiovisual world. Jeff can tackle any job, size or complication thrown at him.",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "D.R. Isidoro",
+    "rating": 5,
+    "date": "2025-09",
+    "text": "Awesome experience with Integrated Solutions of Georgia. From our Starlink setup, TV installs and media room, Jeff is the consummate professional. His knowledge and ability to work with us to maximize our equipment selection without overspending was invaluable.",
+    "services": ["starlink", "tv-mounting", "home-theater"]
+  },
+  {
+    "name": "Mike Shelton",
+    "rating": 5,
+    "date": "2025-09",
+    "text": "Jeff is very knowledgeable and did a great job mounting two flat screen TVs and helping set up internet. He took the time to do things right. Highly recommend.",
+    "services": ["tv-mounting", "networking"]
+  },
+  {
+    "name": "David Chiem",
+    "rating": 5,
+    "date": "2025-08",
+    "text": "Outstanding service from Jeff at Integrated Solutions of Georgia! Incredibly professional, detail-oriented, and knowledgeable. Highly recommend.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "ZachOnOneWheel",
+    "rating": 5,
+    "date": "2025-07",
+    "text": "Jeff was awesome. I had him run some data lines into 2 different rooms. He did an amazing job and at a VERY fair price. If you need quality work done you'll get it here.",
+    "services": ["networking"]
+  },
+  {
+    "name": "Mark Post",
+    "rating": 5,
+    "date": "2025-11",
+    "text": "Jeff and his work is exceptional. The work was immaculate. Every aspect of the job is a forethought to Jeff. Punctual, communicative, clean and tidy. Great value for the price — I would argue the best value for the money I have ever experienced.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "steve penniman",
+    "rating": 5,
+    "date": "2025-12",
+    "text": "What a pleasure working with Jeff. Punctual and precise. Fixed all our complicated network AV issues at a reasonable price. Would highly recommend!",
+    "services": ["networking", "home-theater"]
+  },
+  {
+    "name": "Kelly Demos",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff was able to help us integrate our entire house so we could operate it remotely. Our lights, doors, HVAC, security system etc all on one easy app. He also helped get our WiFi with multiple access points throughout the house.",
+    "services": ["automation", "networking", "security-cameras"]
+  },
+  {
+    "name": "Kari Saltin",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "My husband and I cannot say enough good things about our experience. Jeff installed two large TVs on the wall and came back two weeks later to install our Ring system. He was the consummate professional — on time, cleaned up after himself, and made sure we were completely satisfied.",
+    "services": ["tv-mounting", "security-cameras"]
+  },
+  {
+    "name": "Gregory S",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff and Tony did an amazing job installing my TVs. The wire management was impeccable and everything was completed to perfection.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Chanika Vinson",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff and team installed 5 TVs and sound in my home. Beautiful job, all cords are hidden and work is pristine in each room. It's nice to have a one-stop shop for all tech needs.",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "Visa Ferrell",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff mounted my television in the living room and exceeded my expectations! He faced a major challenge due to the maze behind the wall created by the builder but with all of his high tech equipment he successfully maneuvered the space to get the job done.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Carmetta Jackson",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff called to confirm the address and was on time and completed the job quickly, efficiently and even cleaned up after he was done. TV looks great.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Keenan Burton",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "I am very satisfied with the work that was done. The customer service was above and beyond anything I could've imagined and the work was top tier! Would highly recommend!!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Ben Gillespie",
+    "rating": 5,
+    "date": "2025-01",
+    "text": "Jeff did a fantastic job hanging 2 TVs for us. He was very responsive and easy to work with. He also helped me with a couple of other things unrelated to the TVs that I needed to do. Would HIGHLY recommend Jeff and will definitely hire him again!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Michael Bilyy",
+    "rating": 5,
+    "date": "2025-01",
+    "text": "Jeff was very professional and quick with his install. Left the place looking cleaner than he came! I would recommend his work to anyone needing AV work in their homes.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "ethan kelly",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff did an excellent job mounting our Samsung Frame. He made quick work of it as well. Looks seamless.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Jeff Lange",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "I used Jeff's services for hanging a TV — he was very knowledgeable, communicative and efficient! Would definitely use his services again in the future and recommend to family and friends.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Amanda Urbina",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Fast. Fair price. Great customer service. Highly recommend.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Rager Jangles",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff was very professional and quick. If you ever need great work done when it comes to mounting a TV or setting up network outlets in your home he is the right choice. If you have any AV or network jobs that need to be done — call Integrated Solutions of GA, you won't regret it!",
+    "services": ["tv-mounting", "networking"]
+  },
+  {
+    "name": "Justin Schayer",
+    "rating": 5,
+    "date": "2025-06",
+    "text": "Jeff came out and mounted my two TVs. He did a FANTASTIC JOB! He made sure everything was just right and that I was satisfied. I will highly recommend Jeff for anyone needing their TVs mounted!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Chris Lagerbloom",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Three excellent installations! Jeff's attention to detail is incredible. Most of the time I was already thrilled with what he had done, and that would be when he'd pull out his level and make more minor adjustments. All three truly ended up being perfect.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Ned Goepp",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did an incredible job mounting 3 TVs and an Arc soundbar for me in my new home. He is very professional and focused on doing it the right way. He hung a frame TV over my fireplace and it looks amazing. Took his time to protect the tile and did an impeccable job.",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "Tommy Sherrill",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did a wonderful job mounting two of our TVs in our home. He took his time, as this was on tile above our fireplace. It was perfect and he even got our soundbar mounted to the TV underneath.",
+    "services": ["tv-mounting", "home-theater"]
+  },
+  {
+    "name": "christopher bryson",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did an amazing job mounting our Samsung Frame TV! I ordered the TV thinking I would be able to handle the mount myself, but definitely was wrong. Once I realized how much would go into mounting the TV as well as hiding the one connect box, I called Jeff and he handled everything perfectly.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Ryan Dittmar",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did a great job straightening out some internet issues at our home. Ran some new wires and our network is up and running well. While he was here I asked him to look over some home audio equipment that was already installed — he went above and beyond.",
+    "services": ["networking", "home-theater"]
+  },
+  {
+    "name": "Ken Devine",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "I'm really glad I went with Jeff for my home networking needs. I needed new wired Ethernet connections in the townhome I'd just moved into, and Jeff was referred to me over a local electrician because of his expertise and versatility.",
+    "services": ["networking"]
+  },
+  {
+    "name": "Meredith Beam Cobb",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff goes above and beyond. He hung TVs, installed smart thermostats, and smart lights controlled by Alexa. Highly recommend!",
+    "services": ["tv-mounting", "automation"]
+  },
+  {
+    "name": "Rodney Lee",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did a great job installing our equipment. Very meticulous and careful, also on time and very friendly. Highly recommend.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Rolanda Cook",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff did an awesome job mounting 2 of my TVs. Jeff is detail-oriented and determined that everything is perfectly completed. He is courteous, professional, and provides customer service at an exceptional level.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Dave Ridarick",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Excellent work! Jeff installed my Starlink satellite network and associated cable drops. He is really good at his work and a nice guy to boot!",
+    "services": ["starlink", "networking"]
+  },
+  {
+    "name": "Rus Anthony",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "Jeff is an amazing young man who is totally focused on the customer and their needs, very knowledgeable, courteous and professional. He installed 4 TVs and set them up for us on YouTube using Roku and set up our computer and printer. We would highly recommend him.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "patrick hall",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff with Integrated Solutions of Georgia has completed multiple AV projects for us at Hall & Hound Brewing Co and has always done a great job!",
+    "services": ["commercial"]
+  },
+  {
+    "name": "Kyle Davies",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff came and ran a data line for me. He was great, very professional and explained every step. Cleaned up his mess and was in and out quickly. Very fair prices. Would recommend to anyone and will use again in the future.",
+    "services": ["networking"]
+  },
+  {
+    "name": "Mike Stewart",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff came out on time and well prepared. He explained what he was going to do and then did it. No mess and everything was perfect. I would definitely use him again for any cabling or AV needs.",
+    "services": ["networking", "tv-mounting"]
+  },
+  {
+    "name": "Leslie Hollberg",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "Very professional job! I had a huge TV installed with difficult wiring. It was done perfectly with no wires showing and no mess. I've worked in media and in the TV industry most of my career and I would highly recommend this company!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Ken Selzer",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff is polite and very knowledgeable. I highly recommend Jeff for any of your technical needs. He resolved my sound bar issues in a matter of minutes.",
+    "services": ["home-theater"]
+  },
+  {
+    "name": "Ron Hallewell",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff gave us a top notch job installing a new Direct TV streaming device. Personable and knowledgeable and I wouldn't hesitate to recommend him.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Jennifer Nelson",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff is very professional! Did an amazing job selecting the right TV for me and installed it perfectly!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Adam Harris",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "I have used this company and they do an excellent job. The owner is very friendly and the work is top notch. I will be using them for future wiring and other projects. I recommend using them for any projects you have for business or home.",
+    "services": ["commercial", "networking"]
+  },
+  {
+    "name": "Kourtney Wright",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff was quick and very tidy. Very happy with the TV install, highly recommend!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Rebecca Baldwin",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "Jeff did such a great job hanging my TVs. I would definitely use him again.",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "brandy keatley",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "Jeff was great! He figured out our broken Sonos after a year of it not working!",
+    "services": ["home-theater"]
+  },
+  {
+    "name": "Jeff Horner",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "Affordable, professional, fast, friendly — all these words and more apply to the service I just experienced. I've already recommended Integrated Solutions to friends, and would recommend them to anyone else too!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "tiffany williams",
+    "rating": 5,
+    "date": "2024-06",
+    "text": "Jeff was awesome! He is very professional and has affordable pricing!",
+    "services": ["tv-mounting"]
+  },
+  {
+    "name": "Brandon Shedd",
+    "rating": 5,
+    "date": "2023-06",
+    "text": "They did a great job!",
+    "services": ["tv-mounting"]
+  }
+]
